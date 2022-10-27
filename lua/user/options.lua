@@ -11,3 +11,4 @@ vim.opt.cursorline = true -- highlight the current line
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
 vim.opt.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
+vim.opt.undofile = true                         -- enable persistent undo
