@@ -1,2 +1,3 @@
-require "user.options"
-require "user.keymaps"
+require 'mahadia.core.options'
+require 'mahadia.core.keymaps'
+require 'mahadia.plugins-setup'
