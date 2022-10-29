@@ -31,3 +31,7 @@ keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+
+-- Leader Key stuff --
+keymap("n", "<leader>q", ":qa!<ENTER>")
+keymap("n", "<leader>w", ":w<ENTER>")
