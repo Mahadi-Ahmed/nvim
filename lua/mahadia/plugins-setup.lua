@@ -50,6 +50,13 @@ return packer.startup(function(use)
     as = 'rose-pine',
   })
 
+  -- file explorer
+  use({
+    "nvim-tree/nvim-tree.lua",
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    }
+  })
   -- commenting with gc
 	use("numToStr/Comment.nvim")
 

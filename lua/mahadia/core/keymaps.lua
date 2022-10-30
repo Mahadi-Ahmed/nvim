@@ -32,6 +32,9 @@ keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
+-- Nvim-tree --
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
+
 -- Leader Key stuff --
 keymap("n", "<leader>q", ":qa!<ENTER>")
 keymap("n", "<leader>w", ":w<ENTER>")
