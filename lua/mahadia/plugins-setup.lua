@@ -60,6 +60,9 @@ return packer.startup(function(use)
   -- commenting with gc
 	use("numToStr/Comment.nvim")
 
+  -- statusLine
+  use("nvim-lualine/lualine.nvim")
+
   -- TRY OUT THESE PLUGINS --
   --use("szw/vim-maximizer") -- maximized and restore current window
   --use("tpope/vim-surround")
