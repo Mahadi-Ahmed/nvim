@@ -35,3 +35,6 @@ keymap("i", "jk", "<ESC>", opts)
 -- Leader Key stuff --
 keymap("n", "<leader>q", ":qa!<ENTER>")
 keymap("n", "<leader>w", ":w<ENTER>")
+
+-- Dont save x in registeter
+--keymap("n", "x", '"_x')
