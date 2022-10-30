@@ -50,6 +50,14 @@ return packer.startup(function(use)
     as = 'rose-pine',
   })
 
+  -- commenting with gc
+	use("numToStr/Comment.nvim")
+
+  -- TRY OUT THESE PLUGINS --
+  --use("szw/vim-maximizer") -- maximized and restore current window
+  --use("tpope/vim-surround")
+  --use("")
+  -- --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
