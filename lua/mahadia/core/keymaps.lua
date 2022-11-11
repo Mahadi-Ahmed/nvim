@@ -39,5 +39,11 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap("n", "<leader>q", ":qa!<ENTER>")
 keymap("n", "<leader>w", ":w<ENTER>")
 
+-- telescope
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
+keymap("n", "<leader>st", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+keymap("n", "<leader>sc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
+keymap("n", "<leader>sb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+keymap("n", "<leader>sh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 -- Dont save x in registeter
 --keymap("n", "x", '"_x')
