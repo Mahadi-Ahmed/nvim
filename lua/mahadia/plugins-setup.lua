@@ -19,7 +19,7 @@ end
 vim.cmd [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
   augroup end
 ]]
 
@@ -43,13 +43,11 @@ return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-
   -- Colorschemes
   use({
     'rose-pine/neovim',
     as = 'rose-pine',
   })
-
   -- file explorer
   use({
     "nvim-tree/nvim-tree.lua",
@@ -59,13 +57,20 @@ return packer.startup(function(use)
   })
   -- commenting with gc
 	use("numToStr/Comment.nvim")
-
   -- statusLine
   use("nvim-lualine/lualine.nvim")
-
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+ 	-- Cmp / Autocompletion
+  use { "hrsh7th/nvim-cmp" } -- The completion plugin
+  use { "hrsh7th/cmp-buffer" } -- buffer completions
+  use { "hrsh7th/cmp-path" } -- path completions 
+    -- Snippets
+    use { "saadparwaiz1/cmp_luasnip" } -- snippet completions
+    use { "L3MON4D3/LuaSnip" } --snippet engine
+    use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
+
   -- TRY OUT THESE PLUGINS --
   --use("szw/vim-maximizer") -- maximized and restore current window
   --use("tpope/vim-surround")
