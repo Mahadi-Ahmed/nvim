@@ -1,5 +1,4 @@
 .DS_STORE
-todo.md
 # Compiled Lua sources
 luac.out
 
