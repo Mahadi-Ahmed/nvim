@@ -1,5 +1,5 @@
 [x] Add nvim tree for file explorer
-[] Add Harpoon
+[x] Add Harpoon
 [] Fix yank highlight
 [] vim-maximizer - Toggle split window between maximized and split
 [] which key - so i can see all keybinds

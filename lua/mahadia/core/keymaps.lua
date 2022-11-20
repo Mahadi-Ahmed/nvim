@@ -47,3 +47,11 @@ keymap("n", "<leader>sb", "<cmd>Telescope buffers<cr>") -- list open buffers in 
 keymap("n", "<leader>sh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 -- Dont save x in registeter
 --keymap("n", "x", '"_x')
+--
+keymap("n","<leader>jm",":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>")
+keymap("n","<leader>ji","<cmd>lua require(\"harpoon.mark\").add_file()<cr>")
+keymap("n","<leader>jf",":lua require(\"harpoon.ui\").nav_file(1)<cr>")
+keymap("n","<leader>jd",":lua require(\"harpoon.ui\").nav_file(2)<cr>")
+keymap("n","<leader>js",":lua require(\"harpoon.ui\").nav_file(3)<cr>")
+keymap("n","<leader>ja",":lua require(\"harpoon.ui\").nav_file(4)<cr>")
+keymap("n","<leader>jr",":Telescope harpoon marks<cr>")
