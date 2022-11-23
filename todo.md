@@ -1,7 +1,7 @@
 [x] Add nvim tree for file explorer
 [x] Add Harpoon
 [] Fix yank highlight
-[] vim-maximizer - Toggle split window between maximized and split
+[x] vim-maximizer - Toggle split window between maximized and split
 [] which key - so i can see all keybinds
 
 ### Look into null-ls
@@ -16,9 +16,10 @@
     highlight norma ctermbg=none guibg=none
 
 ## Interesting plugins to look into later
-[] vim-surround
+[] vim-surround - https://github.com/tpope/vim-surround
 [] replaceWithRegister - https://github.com/vim-scripts/ReplaceWithRegister
 [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
+[] vim-targets - https://github.com/wellle/targets.vim
 ### Nvim Tree Settings & Configuration
 [] Remove .git folder from explorer view (Propbably no need to implement this)
 
@@ -27,5 +28,4 @@
 * [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
 * [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 * [Josean Martinez Youtube Video](https://www.youtube.com/watch?v=vdn_pKJUda8&list=LL&index=1)
-
 
