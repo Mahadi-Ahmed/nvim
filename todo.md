@@ -22,8 +22,6 @@
 ### Nvim Tree Settings & Configuration
 [] Remove .git folder from explorer view (Propbably no need to implement this)
 
-
-
 # Resources & Inspo
 * [Lunarvim repo](https://www.lunarvim.org/)
 * [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
