@@ -57,6 +57,8 @@ return packer.startup(function(use)
   })
   -- commenting with gc
 	use("numToStr/Comment.nvim")
+  -- Window Stuff
+  use("szw/vim-maximizer") -- maximized and restore current window
   -- statusLine
   use("nvim-lualine/lualine.nvim")
 	-- fuzzy finding w/ telescope
@@ -73,7 +75,6 @@ return packer.startup(function(use)
     use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
   -- TRY OUT THESE PLUGINS --
-  --use("szw/vim-maximizer") -- maximized and restore current window
   --use("tpope/vim-surround")
   --use("")
   -- --

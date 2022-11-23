@@ -55,3 +55,5 @@ keymap("n","<leader>jd",":lua require(\"harpoon.ui\").nav_file(2)<cr>")
 keymap("n","<leader>js",":lua require(\"harpoon.ui\").nav_file(3)<cr>")
 keymap("n","<leader>ja",":lua require(\"harpoon.ui\").nav_file(4)<cr>")
 keymap("n","<leader>jr",":Telescope harpoon marks<cr>")
+
+keymap("n","<leader>bm", ":MaximizerToggle<cr>")
