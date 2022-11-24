@@ -16,7 +16,7 @@
     highlight norma ctermbg=none guibg=none
 
 ## Interesting plugins to look into later
-[] vim-surround - https://github.com/tpope/vim-surround
+[x] vim-surround - https://github.com/tpope/vim-surround
 [] replaceWithRegister - https://github.com/vim-scripts/ReplaceWithRegister
 [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
 [] vim-targets - https://github.com/wellle/targets.vim
