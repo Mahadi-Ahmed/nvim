@@ -32,3 +32,4 @@ vim.opt.undofile = true  -- enable persistent undo
 
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
+vim.g["sneak#label"] = true

@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use("szw/vim-maximizer") -- maximized and restore current window
   -- extra plugins
   use("tpope/vim-surround")
+  use("justinmk/vim-sneak")
   -- statusLine
   use("nvim-lualine/lualine.nvim")
 	-- fuzzy finding w/ telescope
