@@ -80,11 +80,6 @@ return packer.startup(function(use)
     use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
   use { "windwp/nvim-autopairs" }
-  
-  -- TRY OUT THESE PLUGINS --
-  --use("tpope/vim-surround")
-  --use("")
-  -- --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
