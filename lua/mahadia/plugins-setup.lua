@@ -57,6 +57,8 @@ return packer.startup(function(use)
   })
   -- commenting with gc
 	use("numToStr/Comment.nvim")
+  -- Which Key
+  use("folke/which-key.nvim")
   -- Window Stuff
   use("szw/vim-maximizer") -- maximized and restore current window
   -- extra plugins
