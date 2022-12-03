@@ -15,5 +15,10 @@ nvimtree.setup({
     enable = true,
     ignore = false,
     timeout = 200,
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    }
   }
 })
