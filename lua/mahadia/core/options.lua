@@ -26,7 +26,7 @@ vim.opt.guifont = "FiraCode Nerd Font:h16"
 
 vim.opt.wrap = false -- line wrapping
 
-vim.opt.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.timeoutlen = 300 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 vim.opt.undofile = true  -- enable persistent undo
 
