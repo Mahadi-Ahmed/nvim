@@ -3,6 +3,8 @@ local keymap = vim.keymap.set
 -- Silent keymap option
 local opts = { silent = false }
 
+-- NOTE: look for more keymaps in whichkey.lua
+
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -36,4 +38,6 @@ keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 
 keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "<C-u>", "<C-u>zz", opt)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "k", "kzz")
+keymap("n", "j", "jzz")
