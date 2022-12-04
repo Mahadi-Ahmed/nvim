@@ -4,6 +4,10 @@
 - [x] vim-maximizer - Toggle split window between maximized and split
 - [x] which key - so i can see all keybinds
 
+### Toggleterm
+Refactor toggleterm to open different terminal instances depending on keybinding pressed
+- [x] WIP: toggleterm - terminal windows inside vim
+
 ### Look into null-ls
 - [] Configure [Null-ls](https://www.youtube.com/watch?v=e3xxkEbhG0o)
 
@@ -15,8 +19,10 @@
 - [] Fix transparent background 
       Create a autocmd file to be able to set highlight as an option
       highlight norma ctermbg=none guibg=none
+## Plugins that should be integrated eventually
+- [] [Bufferline - buffer tab plugin](https://github.com/akinsho/bufferline.nvim)
 
-## Interesting plugins to look into later
+#### Interesting plugins to look into later
 - [x] vim-surround - https://github.com/tpope/vim-surround
 - [] replaceWithRegister - https://github.com/vim-scripts/ReplaceWithRegister
 - [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
