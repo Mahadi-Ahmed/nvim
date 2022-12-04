@@ -6,6 +6,7 @@ vim.opt.cursorline = true -- highlight the current line
 -- line numbers
 vim.opt.relativenumber = true
 vim.opt.number = true
+-- vim.opt.scrolloff = 8
 
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns
