@@ -1,8 +1,9 @@
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
-- [] Fix yank highlight
+- [x] Fix yank highlight
 - [x] vim-maximizer - Toggle split window between maximized and split
 - [x] which key - so i can see all keybinds
+- [] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 
 ### Toggleterm
 Refactor toggleterm to open different terminal instances depending on keybinding pressed
