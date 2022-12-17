@@ -48,6 +48,8 @@ return packer.startup(function(use)
     'rose-pine/neovim',
     as = 'rose-pine',
   })
+  -- Treesitter
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'} )
   -- file explorer
   use({
     "nvim-tree/nvim-tree.lua",
