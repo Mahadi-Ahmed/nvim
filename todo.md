@@ -6,7 +6,7 @@
 - [] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 
 ### Toggleterm
-Refactor toggleterm to open different terminal instances depending on keybinding pressed
+- [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
 - [x] WIP: toggleterm - terminal windows inside vim
 
 ### Look into null-ls
@@ -29,6 +29,7 @@ Refactor toggleterm to open different terminal instances depending on keybinding
 - [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
 - [] vim-targets - https://github.com/wellle/targets.vim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
+- [] impatient , speed up startup time - https://github.com/lewis6991/impatient.nvim
 ### Nvim Tree Settings & Configuration
 - [] Remove .git folder from explorer view (Propbably no need to implement this)
 
@@ -37,4 +38,4 @@ Refactor toggleterm to open different terminal instances depending on keybinding
 * [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
 * [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 * [Josean Martinez Youtube Video](https://www.youtube.com/watch?v=vdn_pKJUda8&list=LL&index=1)
-
+* [ThePrimeagen Youtube Video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=LL)
