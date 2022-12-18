@@ -1,3 +1,6 @@
+## INSTALL Mason & lsp
+Look at min 18 in ThePrimeagen video
+
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
 - [x] Fix yank highlight
