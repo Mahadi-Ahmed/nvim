@@ -1,11 +1,13 @@
 ## INSTALL Mason & lsp
-Look at min 18 in ThePrimeagen video
+
+### Look at min 18 in ThePrimeagen video
 
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
 - [x] Fix yank highlight
 - [x] vim-maximizer - Toggle split window between maximized and split
 - [x] which key - so i can see all keybinds
+- [x] Fix formating with leader l f 
 - [] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 - [] nvim undo tree - https://github.com/mbbill/undotree
 
