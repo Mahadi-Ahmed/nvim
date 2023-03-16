@@ -23,8 +23,8 @@
 - [] Telescope: Fix so you can find files that are in gitignore
 - [x] Telescope: leader f - mirror how it works in lunarvim 1.2
 
-- [] Fix transparent background 
-      Create a autocmd file to be able to set highlight as an option
+- [x] Fix transparent background 
+- [x] Create a autocmd file to be able to set highlight as an option
       highlight norma ctermbg=none guibg=none
 ## Plugins that should be integrated eventually
 - [] [Bufferline - buffer tab plugin](https://github.com/akinsho/bufferline.nvim)
