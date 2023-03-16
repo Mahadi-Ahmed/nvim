@@ -14,6 +14,13 @@ require 'mahadia.plugins.harpoon'
 require 'mahadia.plugins.autopairs'
 require 'mahadia.plugins.toggleterm'
 
+local function open_nvim_tree()
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
