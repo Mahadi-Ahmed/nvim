@@ -87,6 +87,7 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
   },
+  ["u"] = { "<cmd>UndotreeToggle<CR>", "Undotree toggle" },
 
   b = {
     name = 'Buffers',
@@ -116,6 +117,7 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
+
 
 }
 
