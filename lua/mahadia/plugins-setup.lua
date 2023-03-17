@@ -73,7 +73,11 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
   use({ "ThePrimeagen/harpoon" }) -- Harpoon
 
- 	-- -- Cmp / Autocompletion
+  use { "windwp/nvim-autopairs" }
+  use { "akinsho/toggleterm.nvim", tag = 'main'}
+  use {'mbbill/undotree'}
+
+ 	-- Cmp / Autocompletion
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -97,7 +101,7 @@ return packer.startup(function(use)
     }
   }
 
- 	-- -- Cmp / Autocompletion
+ 	-- Cmp / Autocompletion
   -- use { "hrsh7th/nvim-cmp" } -- The completion plugin
   -- use { "hrsh7th/cmp-buffer" } -- buffer completions
   -- use { "hrsh7th/cmp-path" } -- path completions 
@@ -106,8 +110,6 @@ return packer.startup(function(use)
   --   use { "L3MON4D3/LuaSnip" } --snippet engine
   --   use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
-  use { "windwp/nvim-autopairs" }
-  use { "akinsho/toggleterm.nvim", tag = 'main'}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
