@@ -1,7 +1,9 @@
 -- appearance
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
 vim.opt.cursorline = true -- highlight the current line
--- vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes"
+vim.opt.title = true
+vim.opt.titlestring = "%<%F%=%l/%L" -- what the title of the window will be set to
 
 -- line numbers
 vim.opt.relativenumber = true
@@ -13,7 +15,6 @@ vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.smartcase = true
 vim.opt.mouse = "a" -- allow the mouse to be used in neovim
 
-vim.opt.showtabline = 0 -- always show tabs
 vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 
@@ -22,13 +23,16 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
--- vim.opt.showtabline = 2
+vim.opt.showtabline = 2
+-- vim.opt.colorcolumn = "120"
 vim.opt.guifont = "FiraCode Nerd Font:h16"
 
 vim.opt.wrap = false -- line wrapping
 
+vim.opt.completeopt = { "menuone", "noselect" } -- set behaviour for popup completion 
+
 vim.opt.timeoutlen = 300 -- time to wait for a mapped sequence to complete (in milliseconds)
-vim.opt.updatetime = 300 -- faster completion (4000ms default)
+vim.opt.updatetime = 100 -- faster completion (4000ms default)
 vim.opt.undofile = true  -- enable persistent undo
 
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
