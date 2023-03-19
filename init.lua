@@ -8,10 +8,19 @@ require 'mahadia.plugins.comment'
 require 'mahadia.plugins.nvim-tree'
 require 'mahadia.plugins.lualine'
 require 'mahadia.plugins.telescope'
-require 'mahadia.plugins.cmp'
+-- require 'mahadia.plugins.cmp'
+require 'mahadia.plugins.lspZero'
 require 'mahadia.plugins.harpoon'
 require 'mahadia.plugins.autopairs'
 require 'mahadia.plugins.toggleterm'
+-- require 'mahadia.plugins.undotree'
+
+local function open_nvim_tree()
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd

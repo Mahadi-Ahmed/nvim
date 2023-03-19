@@ -16,9 +16,18 @@ nvimtree.setup({
     ignore = false,
     timeout = 200,
   },
+  update_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    ignore_list = {},
+  },
   actions = {
     open_file = {
       quit_on_open = true,
     }
+  },
+  filters = {
+    dotfiles = false,
   }
 })

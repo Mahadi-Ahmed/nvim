@@ -83,14 +83,31 @@ local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>qa<CR>", "Quit" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
   },
+  ["u"] = { "<cmd>UndotreeToggle<CR>", "Undotree toggle" },
 
   b = {
     name = 'Buffers',
     m = {':MaximizerToggle<cr>', 'Maximize split toggle'},
+  },
+
+  -- Actual mappings in lspZero.lua
+  l = {
+    name = 'LSP',
+    w = { 'workspace symbols' },
+    i = { 'declarations' },
+    o = { 'open float' },
+    j = { 'next diagnostic' },
+    f = { 'formating' },
+    k = { 'previous diagnostic' },
+    a = { 'code action' },
+    R = { 'references' },
+    r = { 'rename' },
+    -- f = { require("lvim.lsp.utils").format, "Format" }
   },
 
   j = {
@@ -116,7 +133,6 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
-
 }
 
 which_key.setup(setup)
