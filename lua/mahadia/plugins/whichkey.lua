@@ -98,12 +98,14 @@ local mappings = {
   -- Actual mappings in lspZero.lua
   l = {
     name = 'LSP',
-    s = { 'workspace symbols' },
-    d = { 'open float' },
+    w = { 'workspace symbols' },
+    i = { 'declarations' },
+    o = { 'open float' },
     j = { 'next diagnostic' },
+    f = { 'formating' },
     k = { 'previous diagnostic' },
     a = { 'code action' },
-    R = { 'code action' },
+    R = { 'references' },
     r = { 'rename' },
     -- f = { require("lvim.lsp.utils").format, "Format" }
   },
