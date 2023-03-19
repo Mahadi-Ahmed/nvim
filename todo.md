@@ -9,11 +9,9 @@
 - [x] which key - so i can see all keybinds
 - [x] Fix formating with leader l f 
 - [] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
-- [] nvim undo tree - https://github.com/mbbill/undotree
-
-### Toggleterm
-- [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
-- [x] WIP: toggleterm - terminal windows inside vim
+- [x] nvim undo tree - https://github.com/mbbill/undotree
+  - [] create persistent undotree
+- [] Fix the title string
 
 ### Look into null-ls
 - [] Configure [Null-ls](https://www.youtube.com/watch?v=e3xxkEbhG0o)
@@ -36,8 +34,14 @@
 - [] vim-targets - https://github.com/wellle/targets.vim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
 - [] impatient , speed up startup time - https://github.com/lewis6991/impatient.nvim
+
 ### Nvim Tree Settings & Configuration
-- [] Remove .git folder from explorer view (Propbably no need to implement this)
+- [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
+- [x] Remove .git folder from explorer view (Propbably no need to implement this)
+
+### Toggleterm
+- [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
+- [x] WIP: toggleterm - terminal windows inside vim
 
 # Resources & Inspo
 * [Lunarvim repo](https://www.lunarvim.org/)
@@ -45,3 +49,4 @@
 * [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 * [Josean Martinez Youtube Video](https://www.youtube.com/watch?v=vdn_pKJUda8&list=LL&index=1)
 * [ThePrimeagen Youtube Video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=LL)
+* [lspzero](https://github.com/VonHeikemen/lsp-zero.nvim)
