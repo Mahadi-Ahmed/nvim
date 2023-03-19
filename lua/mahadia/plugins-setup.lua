@@ -75,7 +75,8 @@ return packer.startup(function(use)
 
   use { "windwp/nvim-autopairs" }
   use { "akinsho/toggleterm.nvim", tag = 'main'}
-  use {'mbbill/undotree'}
+  use { 'mbbill/undotree' }
+  use { 'farmergreg/vim-lastplace' }
 
  	-- Cmp / Autocompletion
   use {
