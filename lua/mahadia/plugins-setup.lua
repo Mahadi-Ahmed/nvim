@@ -42,14 +42,14 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
   -- Colorschemes
   use({
     'rose-pine/neovim',
     as = 'rose-pine',
   })
   -- Treesitter
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'} )
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('windwp/nvim-ts-autotag')
   -- file explorer
   use({
@@ -59,7 +59,7 @@ return packer.startup(function(use)
     }
   })
   -- commenting with gc
-	use("numToStr/Comment.nvim")
+  use("numToStr/Comment.nvim")
   -- Which Key
   use("folke/which-key.nvim")
   -- Window Stuff
@@ -69,44 +69,45 @@ return packer.startup(function(use)
   use("justinmk/vim-sneak")
   -- statusLine
   use("nvim-lualine/lualine.nvim")
-	-- fuzzy finding w/ telescope
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
-  use({ "ThePrimeagen/harpoon" }) -- Harpoon
+  -- fuzzy finding w/ telescope
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })       -- fuzzy finder
+  use({ "ThePrimeagen/harpoon" })                                  -- Harpoon
 
   use { "windwp/nvim-autopairs" }
-  use { "akinsho/toggleterm.nvim", tag = 'main'}
+  use { "akinsho/toggleterm.nvim", tag = 'main' }
   use { 'mbbill/undotree' }
   use { 'farmergreg/vim-lastplace' }
+  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 
- 	-- Cmp / Autocompletion
+  -- Cmp / Autocompletion
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-path'},
-      {'saadparwaiz1/cmp_luasnip'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'hrsh7th/cmp-nvim-lua'},
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lua' },
 
       -- Snippets
-      {'L3MON4D3/LuaSnip'},
+      { 'L3MON4D3/LuaSnip' },
       -- Snippet Collection (Optional)
-      {'rafamadriz/friendly-snippets'},
+      { 'rafamadriz/friendly-snippets' },
     }
   }
 
- 	-- Cmp / Autocompletion
+  -- Cmp / Autocompletion
   -- use { "hrsh7th/nvim-cmp" } -- The completion plugin
   -- use { "hrsh7th/cmp-buffer" } -- buffer completions
-  -- use { "hrsh7th/cmp-path" } -- path completions 
+  -- use { "hrsh7th/cmp-path" } -- path completions
   --   -- Snippets
   --   use { "saadparwaiz1/cmp_luasnip" } -- snippet completions
   --   use { "L3MON4D3/LuaSnip" } --snippet engine
