@@ -1,14 +1,10 @@
-## INSTALL Mason & lsp
-
-### Look at min 18 in ThePrimeagen video
-
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
 - [x] Fix yank highlight
 - [x] vim-maximizer - Toggle split window between maximized and split
 - [x] which key - so i can see all keybinds
 - [x] Fix formating with leader l f 
-- [] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
+- [x] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 - [x] nvim undo tree - https://github.com/mbbill/undotree
   - [] create persistent undotree
 - [] Fix the title string
@@ -38,6 +34,7 @@
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
 - [x] Remove .git folder from explorer view (Propbably no need to implement this)
+- [] Fix so if you open a file directly nvimtree does not open first
 
 ### Toggleterm
 - [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
@@ -48,5 +45,5 @@
 * [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch)
 * [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 * [Josean Martinez Youtube Video](https://www.youtube.com/watch?v=vdn_pKJUda8&list=LL&index=1)
-* [ThePrimeagen Youtube Video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=LL)
+* Look at min 18 in ThePrimeagen video [ThePrimeagen Youtube Video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=LL)
 * [lspzero](https://github.com/VonHeikemen/lsp-zero.nvim)

@@ -50,6 +50,7 @@ return packer.startup(function(use)
   })
   -- Treesitter
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'} )
+  use('windwp/nvim-ts-autotag')
   -- file explorer
   use({
     "nvim-tree/nvim-tree.lua",
