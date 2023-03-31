@@ -1,5 +1,6 @@
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
+  - [x] Increase size of harpoon menu window
 - [x] Fix yank highlight
 - [x] vim-maximizer - Toggle split window between maximized and split
 - [x] which key - so i can see all keybinds
@@ -8,6 +9,13 @@
 - [x] nvim undo tree - https://github.com/mbbill/undotree
   - [] create persistent undotree
 - [] Fix the title string
+
+## Plugins that should be integrated eventually
+- [x] [Bufferline - buffer tab plugin](https://github.com/akinsho/bufferline.nvim)
+  Continue customizing the config for bufferline
+  - [] Add command to close buffer
+  - [] Add command to select buffer to close 
+  - [] Add keybindings & map then in whichkey
 
 ### Look into null-ls
 - [] Configure [Null-ls](https://www.youtube.com/watch?v=e3xxkEbhG0o)
@@ -20,8 +28,6 @@
 - [x] Fix transparent background 
 - [x] Create a autocmd file to be able to set highlight as an option
       highlight norma ctermbg=none guibg=none
-## Plugins that should be integrated eventually
-- [] [Bufferline - buffer tab plugin](https://github.com/akinsho/bufferline.nvim)
 
 #### Interesting plugins to look into later
 - [x] vim-surround - https://github.com/tpope/vim-surround
@@ -30,6 +36,7 @@
 - [] vim-targets - https://github.com/wellle/targets.vim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
 - [] impatient , speed up startup time - https://github.com/lewis6991/impatient.nvim
+- [] trailblazer, stack based mark system(https://github.com/LeonHeidelbach/trailblazer.nvim)
 
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
@@ -39,6 +46,7 @@
 ### Toggleterm
 - [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
 - [x] WIP: toggleterm - terminal windows inside vim
+- [] Add intigration to lazygit
 
 # Resources & Inspo
 * [Lunarvim repo](https://www.lunarvim.org/)
