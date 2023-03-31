@@ -4,6 +4,11 @@ if not status_ok then
 end
 
 bufferline.setup {
+  highlights = {
+    fill = {
+      bg = '#22222F'
+    },
+  },
   options = {
     mode = 'buffers',
     close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
@@ -58,6 +63,7 @@ bufferline.setup {
     show_close_icon = false,
     show_tab_indicators = true,
     show_duplicate_prefix = true, -- whether to show duplicate buffer prefix
+    always_show_bufferline = true,
     separator_style = "thin",
   }
 }
