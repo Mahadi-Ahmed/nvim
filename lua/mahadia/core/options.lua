@@ -4,6 +4,7 @@ vim.opt.cursorline = true -- highlight the current line
 vim.opt.signcolumn = "yes"
 vim.opt.title = true
 vim.opt.titlestring = "%<%F%=%l/%L" -- what the title of the window will be set to
+vim.opt.fillchars = { vert = ' ', eob = ' '}
 
 -- line numbers
 vim.opt.relativenumber = true
@@ -29,7 +30,7 @@ vim.opt.guifont = "FiraCode Nerd Font:h16"
 
 vim.opt.wrap = false -- line wrapping
 
-vim.opt.completeopt = { "menuone", "noselect" } -- set behaviour for popup completion 
+-- vim.opt.completeopt = { "menuone", "noselect" } -- set behaviour for popup completion 
 
 vim.opt.timeoutlen = 300 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.updatetime = 100 -- faster completion (4000ms default)
