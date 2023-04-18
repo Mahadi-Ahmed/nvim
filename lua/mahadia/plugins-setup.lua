@@ -48,6 +48,7 @@ return packer.startup(function(use)
     'rose-pine/neovim',
     as = 'rose-pine',
   })
+  use({ "folke/tokyonight.nvim", as = 'tokyonight' })
   -- Treesitter
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('windwp/nvim-ts-autotag')
@@ -71,8 +72,8 @@ return packer.startup(function(use)
   use("nvim-lualine/lualine.nvim")
   -- fuzzy finding w/ telescope
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })       -- fuzzy finder
-  use({ "ThePrimeagen/harpoon" })                                  -- Harpoon
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })        -- fuzzy finder
+  use({ "ThePrimeagen/harpoon" })                                   -- Harpoon
 
   use { "windwp/nvim-autopairs" }
   use { "akinsho/toggleterm.nvim", tag = 'main' }
