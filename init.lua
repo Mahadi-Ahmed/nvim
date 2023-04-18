@@ -18,8 +18,11 @@ require 'mahadia.plugins.toggleterm'
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
-local function open_nvim_tree()
+vim.api.nvim_create_user_command("BufferKill", function()
+  require('mahadia.plugins.bufferline').buf_kill "bd"
+end, {})
 
+local function open_nvim_tree()
   -- open the tree
   require("nvim-tree.api").tree.open()
 end
@@ -28,12 +31,12 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 local yank_group = augroup('HighlightYank', {})
 
 autocmd('TextYankPost', {
-    group = yank_group,
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
-            timeout = 40,
-        })
-    end,
+  group = yank_group,
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank({
+      higroup = 'IncSearch',
+      timeout = 40,
+    })
+  end,
 })
