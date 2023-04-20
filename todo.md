@@ -8,14 +8,19 @@
 - [x] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 - [x] nvim undo tree - https://github.com/mbbill/undotree
   - [] create persistent undotree
-- [] Fix the title string
 
-## Plugins that should be integrated eventually
+- [] Fix the title string
+- [] Add integration to gitsigns(https://github.com/lewis6991/gitsigns.nvim)
+
+- [x] Add colorizer to show hex colors[colorizer](https://github.com/norcalli/nvim-colorizer.lua)
+  - [x] Add a command to turn on & off the colorizer in whichkey
+
 - [x] [Bufferline - buffer tab plugin](https://github.com/akinsho/bufferline.nvim)
   Continue customizing the config for bufferline
-  - [] Add command to close buffer
-  - [] Add command to select buffer to close 
-  - [] Add keybindings & map then in whichkey
+  - [x] Fix bufferline background
+  - [x] Add command to close buffer
+  - [x] Add command to select buffer to close 
+  - [x] Add keybindings & map then in whichkey
 
 ### Look into null-ls
 - [] Configure [Null-ls](https://www.youtube.com/watch?v=e3xxkEbhG0o)
@@ -42,6 +47,7 @@
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
 - [x] Remove .git folder from explorer view (Propbably no need to implement this)
 - [] Fix so if you open a file directly nvimtree does not open first
+- [] Change so the tree doesnt use symbols instead it highlights the color of the name of of file if its dirty/new in git
 
 ### Toggleterm
 - [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
