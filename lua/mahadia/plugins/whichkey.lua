@@ -89,10 +89,24 @@ local mappings = {
     "Find files",
   },
   ["u"] = { "<cmd>UndotreeToggle<CR>", "Undotree toggle" },
+  ["t"] = { "<cmd>ColorizerToggle<CR>", "Colorizer toggle" },
   b = {
     name = 'Buffers',
+    j = { "<cmd>BufferLinePick<cr>", "Jump" },
+    f = { "<cmd>Telescope buffers<cr>", "Find" },
+    b = { "<cmd>BufferLineCyclePrev<cr>", "Previous" },
+    n = { "<cmd>BufferLineCycleNext<cr>", "Next" },
     m = { ':MaximizerToggle<cr>', 'Maximize split toggle' },
     c = { "<cmd>BufferKill<CR>", "Close Buffer" },
+    e = {
+      "<cmd>BufferLinePickClose<cr>",
+      "Pick which buffer to close",
+    },
+    h = { "<cmd>BufferLineCloseLeft<cr>", "Close all to the left" },
+    l = {
+      "<cmd>BufferLineCloseRight<cr>",
+      "Close all to the right",
+    },
   },
   -- Actual mappings in lspZero.lua
   l = {
