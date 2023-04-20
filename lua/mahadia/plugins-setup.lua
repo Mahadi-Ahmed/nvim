@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use { 'mbbill/undotree' }
   use { 'farmergreg/vim-lastplace' }
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+  use { 'norcalli/nvim-colorizer.lua' }
 
   -- Cmp / Autocompletion
   use {
