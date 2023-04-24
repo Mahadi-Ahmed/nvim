@@ -51,8 +51,8 @@
 
 ### Toggleterm
 - [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
-- [x] WIP: toggleterm - terminal windows inside vim
-- [] Add intigration to lazygit
+- [x] toggleterm - terminal windows inside vim
+- [x] Add intigration to lazygit
 
 # Resources & Inspo
 * [Lunarvim repo](https://www.lunarvim.org/)

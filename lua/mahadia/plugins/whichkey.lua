@@ -122,6 +122,10 @@ local mappings = {
     r = { 'rename' },
     -- f = { require("lvim.lsp.utils").format, "Format" }
   },
+  g = {
+    name = 'Git',
+    g = { "<cmd>lua _lazygit_toggle()<CR>", "Lazygit" },
+  },
   j = {
     name = 'Harpoon',
     m = { ':lua require("harpoon.ui").toggle_quick_menu()<cr>', 'toggle menu' },
