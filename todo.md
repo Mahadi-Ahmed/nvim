@@ -10,7 +10,7 @@
   - [] create persistent undotree
 
 - [] Fix the title string
-- [] Add integration to gitsigns(https://github.com/lewis6991/gitsigns.nvim)
+- [x] Add integration to gitsigns(https://github.com/lewis6991/gitsigns.nvim)
 
 - [x] Add colorizer to show hex colors[colorizer](https://github.com/norcalli/nvim-colorizer.lua)
   - [x] Add a command to turn on & off the colorizer in whichkey

@@ -13,6 +13,9 @@ require 'mahadia.plugins.lspZero'
 require 'mahadia.plugins.harpoon'
 require 'mahadia.plugins.autopairs'
 require 'mahadia.plugins.toggleterm'
+require 'mahadia.plugins.gitsigns'
+
+-- uncommented since i havent implemented persistent undotree yet
 -- require 'mahadia.plugins.undotree'
 
 local augroup = vim.api.nvim_create_augroup

@@ -82,6 +82,9 @@ return packer.startup(function(use)
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use { 'norcalli/nvim-colorizer.lua' }
 
+
+  -- gitsigns
+  use { 'lewis6991/gitsigns.nvim' }
   -- Cmp / Autocompletion
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -105,6 +108,10 @@ return packer.startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
+  --vim-signature is a plugin to place, toggle and display marks.
+  use { 'kshenoy/vim-signature' }
+
+
 
   -- Cmp / Autocompletion
   -- use { "hrsh7th/nvim-cmp" } -- The completion plugin
