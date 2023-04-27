@@ -75,7 +75,7 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })        -- fuzzy finder
   use({ "ThePrimeagen/harpoon" })                                   -- Harpoon
 
-  use({'JoosepAlviste/nvim-ts-context-commentstring', requires = 'nvim-treesitter/nvim-treesitter'})
+  use({ 'JoosepAlviste/nvim-ts-context-commentstring', requires = 'nvim-treesitter/nvim-treesitter' })
   use { "windwp/nvim-autopairs" }
   use { "akinsho/toggleterm.nvim", tag = 'main' }
   use { 'mbbill/undotree' }
@@ -111,6 +111,8 @@ return packer.startup(function(use)
   }
   --vim-signature is a plugin to place, toggle and display marks.
   use { 'kshenoy/vim-signature' }
+
+  use { 'dstein64/vim-startuptime' }
 
 
 
