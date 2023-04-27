@@ -8,7 +8,8 @@ local M = {}
 bufferline.setup {
   highlights = {
     fill = {
-      bg = '#191724'
+      -- bg = '#191724' -- bg for darkmode
+      bg = '#faf4ed' -- bg for light mode
     },
   },
   options = {
