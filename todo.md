@@ -7,7 +7,11 @@
 - [x] Fix formating with leader l f 
 - [x] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 - [x] nvim undo tree - https://github.com/mbbill/undotree
+- [x] Fix folds & folding
+
   - [] create persistent undotree
+- [] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
+- [] Customize Lualine
 
 - [] Fix the title string
 - [x] Add integration to gitsigns(https://github.com/lewis6991/gitsigns.nvim)
@@ -17,6 +21,7 @@
 
 - [x] [Bufferline - buffer tab plugin](https://github.com/akinsho/bufferline.nvim)
   Continue customizing the config for bufferline
+  - [] fix so each split has its own bufferline
   - [x] Fix bufferline background
   - [x] Add command to close buffer
   - [x] Add command to select buffer to close 
