@@ -51,7 +51,7 @@
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
 - [x] Remove .git folder from explorer view (Propbably no need to implement this)
-- [] Fix so if you open a file directly nvimtree does not open first
+- [x] Fix so if you open a file directly nvimtree does not open first
 - [] Change so the tree doesnt use symbols instead it highlights the color of the name of of file if its dirty/new in git
 
 ### Toggleterm
