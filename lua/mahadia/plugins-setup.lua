@@ -49,6 +49,7 @@ return packer.startup(function(use)
     as = 'rose-pine',
   })
   use({ "folke/tokyonight.nvim", as = 'tokyonight' })
+  use { "ellisonleao/gruvbox.nvim", as = 'gruvbox' }
   -- Treesitter
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('windwp/nvim-ts-autotag')
@@ -80,10 +81,21 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", tag = 'main' }
   use { 'mbbill/undotree' }
   use { 'farmergreg/vim-lastplace' }
-  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
   use { 'norcalli/nvim-colorizer.lua' }
 
-
+  -- Lua
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
   -- gitsigns
   use { 'lewis6991/gitsigns.nvim' }
   -- Cmp / Autocompletion
