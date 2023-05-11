@@ -1,3 +1,4 @@
+vim.loader.enable()
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
