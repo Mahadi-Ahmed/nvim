@@ -8,10 +8,12 @@
 - [x] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 - [x] nvim undo tree - https://github.com/mbbill/undotree
 - [x] Fix folds & folding
+- [] Fix so you can see workspace diagnstics (look into leader l w in lvim)
 
   - [] create persistent undotree
 - [] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
-- [] Customize Lualine
+- [x] Customize Lualine
+  - [] list amount of lsp servers running 
 
 - [] Fix the title string
 - [x] Add integration to gitsigns(https://github.com/lewis6991/gitsigns.nvim)
@@ -45,7 +47,6 @@
 - [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
 - [] vim-targets - https://github.com/wellle/targets.vim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
-- [] impatient , speed up startup time - https://github.com/lewis6991/impatient.nvim
 - [] trailblazer, stack based mark system(https://github.com/LeonHeidelbach/trailblazer.nvim)
 
 ### Nvim Tree Settings & Configuration
