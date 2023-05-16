@@ -124,6 +124,8 @@ return packer.startup(function(use)
   --vim-signature is a plugin to place, toggle and display marks.
   use { 'kshenoy/vim-signature' }
 
+  --vim-tmux-navigator
+  use { 'christoomey/vim-tmux-navigator' }
   use { 'dstein64/vim-startuptime' }
 
 
