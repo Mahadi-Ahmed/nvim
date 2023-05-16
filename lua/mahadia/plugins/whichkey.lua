@@ -164,6 +164,7 @@ local mappings = {
     name = 'Search',
     t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
     c = { "<cmd>Telescope grep_string<cr>", "Find Text under cursor" },
+    f = { "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Git files" },
     b = { "<cmd>Telescope buffers<cr>", "Find open buffers" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
