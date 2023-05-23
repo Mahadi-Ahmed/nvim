@@ -8,9 +8,9 @@ local M = {}
 bufferline.setup {
   highlights = {
     fill = {
-      -- bg = '#191724' -- bg for darkmode rose pine
+      bg = '#191724' -- bg for darkmode rose pine
       -- bg = '#faf4ed' -- bg for light mode rose pine
-      bg = '#f2e5bc' -- bg for darkmode gruvbox light
+      -- bg = '#f2e5bc' -- bg for darkmode gruvbox light
     },
   },
   options = {

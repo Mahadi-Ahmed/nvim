@@ -7,9 +7,9 @@ end
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  -- bg       = '#191724', -- bg for darkmode rose pine
+  bg       = '#191724', -- bg for darkmode rose pine
   -- bg       = '#faf4ed', -- bg for lightmode rose pine
-  bg       = '#f2e5bc', -- bg for lightmode gruvbox
+  -- bg       = '#f2e5bc', -- bg for lightmode gruvbox
   fg       = '#bbc2cf',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
@@ -17,8 +17,8 @@ local colors = {
   green    = '#98be65',
   orange   = '#FF8800',
   violet   = '#a9a1e1',
-  -- magenta  = '#ebbcba', --rose pinse
-  magenta  = '#8ec07c', -- for gruvbox
+  magenta  = '#ebbcba', --rose pinse
+  -- magenta  = '#8ec07c', -- for gruvbox
   blue     = '#51afef',
   red      = '#ec5f67',
 }

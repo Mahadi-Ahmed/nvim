@@ -5,8 +5,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.title = true
 vim.opt.titlestring = "%<%F%=%l/%L" -- what the title of the window will be set to
 vim.opt.fillchars = { vert = ' ', eob = ' '}
-vim.o.background = "light" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+-- vim.o.background = "light" -- or "light" for light mode
+-- vim.cmd([[colorscheme gruvbox]])
 
 -- line numbers
 vim.opt.relativenumber = true
