@@ -15,6 +15,8 @@ nvimtree.setup({
     enable = true,
     ignore = false,
     timeout = 200,
+    show_on_dirs = true,
+    show_on_open_dirs = true,
   },
   update_cwd = true,
   update_focused_file = {
