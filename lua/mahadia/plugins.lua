@@ -53,11 +53,17 @@ local plugins = {
     event = "User FileOpened",
   },
   -- Which Key
-  { "folke/which-key.nvim" },
+  {
+    "folke/which-key.nvim",
+    cmd = "WhichKey",
+    event = "VeryLazy"
+  },
   -- Window Stuff
   { "szw/vim-maximizer" }, -- maximized and restore current window
   -- extra plugins
-  { "tpope/vim-surround" },
+  {
+    "tpope/vim-surround",
+  },
   { "justinmk/vim-sneak" },
   -- statusLine
   { "nvim-lualine/lualine.nvim" },
@@ -72,14 +78,45 @@ local plugins = {
 
   { 'JoosepAlviste/nvim-ts-context-commentstring', dependencies = 'nvim-treesitter/nvim-treesitter' },
   { "windwp/nvim-autopairs" },
-  { "akinsho/toggleterm.nvim", tag = 'main', lazy = true },
+    -- Terminal
+  {
+    "akinsho/toggleterm.nvim",
+    branch = "main",
+    cmd = {
+      "ToggleTerm",
+      "TermExec",
+      "ToggleTermToggleAll",
+      "ToggleTermSendCurrentLine",
+      "ToggleTermSendVisualLines",
+      "ToggleTermSendVisualSelection",
+    },
+    -- keys = lvim.builtin.terminal.open_mapping,
+    -- enabled = lvim.builtin.terminal.active,
+  },
   { 'mbbill/undotree', lazy = true },
   { 'farmergreg/vim-lastplace' },
-  { 'akinsho/bufferline.nvim',
-    tag = "*",
-    dependencies = 'nvim-tree/nvim-web-devicons'
+  {
+    "akinsho/bufferline.nvim",
+    branch = "main",
+    event = "User FileOpened",
   },
-  { 'norcalli/nvim-colorizer.lua', lazy = true },
+  { 'norcalli/nvim-colorizer.lua',
+    lazy = true,
+    cmd = {
+      "ColorizerToggle"
+    }
+  },
+
+  {
+    'goolord/alpha-nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      -- require'alpha'.setup(require'alpha.themes.dashboard'.config)
+      require'alpha'.setup(require'alpha.themes.theta'.config)
+      -- require'alpha'.setup(require'alpha.themes.startify'.config)
+    end,
+    event = "VimEnter"
+  },
 
   -- Icons
   {
@@ -95,7 +132,7 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
-    lazy = true
+    lazy = false
   },
   -- gitsigns
   { 'lewis6991/gitsigns.nvim', lazy = true },
@@ -123,7 +160,7 @@ local plugins = {
     }
   },
   --vim-signature is a plugin to place, toggle and display marks.
-  { 'kshenoy/vim-signature', lazy = true },
+  { 'kshenoy/vim-signature' },
 
   --vim-tmux-navigator
   { 'christoomey/vim-tmux-navigator' },
