@@ -12,7 +12,7 @@
 - [] Fix so you can see workspace diagnstics (look into leader l w in lvim)
 
   - [] create persistent undotree
-- [] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
+- [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
 - [x] Customize Lualine
   - [] list amount of lsp servers running 
 
@@ -35,7 +35,7 @@
 
 ### Telescope
 - [] Telescope find text window [theme](https://github.com/nvim-telescope/telescope.nvim#themes) 
-- [] Telescope: Fix so you can find files that are in gitignore
+- [x] Telescope: Fix so you can find files that are in gitignore
 - [x] Telescope: leader f - mirror how it works in lunarvim 1.2
 
 - [x] Fix transparent background 
@@ -83,3 +83,5 @@ Startup times with packer:
 211
 --- 
 Startup time with lazy
+199
+200
