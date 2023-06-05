@@ -18,10 +18,10 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   end,
 })
 
+require 'mahadia.plugins'
 require 'mahadia.core.colorscheme'
 require 'mahadia.core.options'
 require 'mahadia.core.keymaps'
-require 'mahadia.plugins-setup'
 require 'mahadia.plugins.whichkey'
 require 'mahadia.plugins.treesitter'
 require 'mahadia.plugins.comment'

@@ -85,9 +85,8 @@ local mappings = {
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
   ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
-  },
+    "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "Git files" },
   ["u"] = { "<cmd>UndotreeToggle<CR>", "Undotree toggle" },
   ["t"] = { "<cmd>ColorizerToggle<CR>", "Colorizer toggle" },
   b = {
@@ -164,7 +163,10 @@ local mappings = {
     name = 'Search',
     t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
     c = { "<cmd>Telescope grep_string<cr>", "Find Text under cursor" },
-    f = { "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Git files" },
+    f = {
+      "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+      "Find files",
+    },
     b = { "<cmd>Telescope buffers<cr>", "Find open buffers" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
