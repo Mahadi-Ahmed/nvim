@@ -42,3 +42,14 @@ lsp.setup()
 vim.diagnostic.config({
   virtual_text = true,
 })
+
+-- Setup cmp
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+  }
+})
+
+-- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/autocomplete.md
