@@ -8,10 +8,11 @@
 - [x] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 - [x] nvim undo tree - https://github.com/mbbill/undotree
 - [x] Fix folds & folding
+- [] add [markdown preview plugin](https://github.com/iamcco/markdown-preview.nvim)
 - [] Fix so you can see workspace diagnstics (look into leader l w in lvim)
 
   - [] create persistent undotree
-- [] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
+- [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
 - [x] Customize Lualine
   - [] list amount of lsp servers running 
 
@@ -34,7 +35,7 @@
 
 ### Telescope
 - [] Telescope find text window [theme](https://github.com/nvim-telescope/telescope.nvim#themes) 
-- [] Telescope: Fix so you can find files that are in gitignore
+- [x] Telescope: Fix so you can find files that are in gitignore
 - [x] Telescope: leader f - mirror how it works in lunarvim 1.2
 
 - [x] Fix transparent background 
@@ -68,3 +69,19 @@
 * Look at min 18 in ThePrimeagen video [ThePrimeagen Youtube Video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=LL)
 * [lspzero](https://github.com/VonHeikemen/lsp-zero.nvim)
 * [ftplugin](https://neovim.io/doc/user/filetype.html) & [usage of ftplugin](https://www.reddit.com/r/neovim/comments/x3zp6t/usage_of_afterftplugin_directory_for/)
+
+
+---
+Startup times with packer:
+190
+207
+220
+253
+260
+199
+266
+211
+--- 
+Startup time with lazy
+199
+200
