@@ -93,7 +93,7 @@ local plugins = {
     -- keys = lvim.builtin.terminal.open_mapping,
     -- enabled = lvim.builtin.terminal.active,
   },
-  { 'mbbill/undotree', lazy = true },
+  { 'mbbill/undotree' },
   { 'farmergreg/vim-lastplace' },
   {
     "akinsho/bufferline.nvim",
