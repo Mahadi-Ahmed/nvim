@@ -124,8 +124,8 @@ nvimtree.setup({
     auto_open = true,
   },
   update_focused_file = {
-    enable = false,
-    update_root = false,
+    enable = true,
+    update_root = true,
     ignore_list = {},
   },
   system_open = {
@@ -194,7 +194,7 @@ nvimtree.setup({
       },
     },
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
       resize_window = true,
       window_picker = {
         enable = true,
