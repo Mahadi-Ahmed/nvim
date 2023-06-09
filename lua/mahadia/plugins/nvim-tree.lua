@@ -4,8 +4,7 @@ if not setup then
 end
 
 -- load icons
--- Icons = require 'icons'
--- Icons = require('icons')
+Icons = require('mahadia.plugins.icons')
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -88,31 +87,31 @@ nvimtree.setup({
         folder = true,
         folder_arrow = true,
         git = true,
-        modified = true,
+        -- modified = true,
       },
       glyphs = {
         default = "",
         symlink = "",
-        bookmark = "󰆤",
-        modified = "●",
+        bookmark = Icons.ui.BookMark,
+        -- modified = "●",
         folder = {
-          arrow_closed = "",
-          arrow_open = "",
-          default = "",
-          open = "",
-          empty = "",
-          empty_open = "",
+          arrow_closed = Icons.ui.TriangleShortArrowRight,
+          arrow_open = Icons.ui.TriangleShortArrowDown,
+          default = Icons.ui.Folder,
+          open = Icons.ui.FolderOpen,
+          empty = Icons.ui.EmptyFolder,
+          empty_open = Icons.ui.EmptyFolderOpen,
           symlink = "",
           symlink_open = "",
         },
         git = {
-          unstaged = "✗",
-          staged = "✓",
-          unmerged = "",
-          renamed = "➜",
-          untracked = "★",
-          deleted = "",
-          ignored = "◌",
+          unstaged = Icons.git.FileUnstaged,
+          staged = Icons.git.FileStaged,
+          unmerged = Icons.git.FileUnmerged,
+          renamed = Icons.git.FileRenamed,
+          untracked = Icons.git.FileUntracked,
+          deleted = Icons.git.FileDeleted,
+          ignored = Icons.git.FileIgnored,
         },
       },
     },
@@ -142,10 +141,10 @@ nvimtree.setup({
       max = vim.diagnostic.severity.ERROR,
     },
     icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
+      hint = Icons.diagnostics.BoldHint,
+      info = Icons.diagnostics.BoldInformation,
+      warning = Icons.diagnostics.BoldWarning,
+      error = Icons.diagnostics.BoldError,
     },
   },
   filters = {
