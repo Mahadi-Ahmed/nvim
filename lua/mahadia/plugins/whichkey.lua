@@ -85,8 +85,18 @@ local mappings = {
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
   ["f"] = {
-    "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Git files" },
+    function()
+      local _, builtin = pcall(require, "telescope.builtin")
+      local _, themes = pcall(require, "telescope.themes")
+      local ok = pcall(builtin.git_files, themes.get_dropdown({previewer = false}))
+
+      if not ok then
+        -- builtin.find_files(themes.get_dropdown({previewer = false}))
+        builtin.find_files(themes.get_dropdown())
+      end
+    end,
+    "Find File",
+  },
   ["u"] = { "<cmd>UndotreeToggle<CR>", "Undotree toggle" },
   ["t"] = { "<cmd>ColorizerToggle<CR>", "Colorizer toggle" },
   b = {

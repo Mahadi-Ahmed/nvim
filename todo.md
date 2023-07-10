@@ -8,6 +8,7 @@
 - [x] [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) use this plugin to auto close html tags
 - [x] nvim undo tree - https://github.com/mbbill/undotree
 - [x] Fix folds & folding
+- [x] create fallback for leader f to find files if vim is used in a non git folder
 - [] add [markdown preview plugin](https://github.com/iamcco/markdown-preview.nvim)
 - [] Fix so you can see workspace diagnstics (look into leader l w in lvim)
 
