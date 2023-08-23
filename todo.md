@@ -13,7 +13,7 @@
 - [] Fix so you can see workspace diagnstics (look into leader l w in lvim)
 
   - [] create persistent undotree
-- [] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
+- [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
 - [x] Customize Lualine
   - [] list amount of lsp servers running 
 
