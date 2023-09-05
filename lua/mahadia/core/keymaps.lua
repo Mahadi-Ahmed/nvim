@@ -50,3 +50,20 @@ keymap("n", "<M-f>", ":ToggleTerm direction=float<CR>", opts)
 -- visual block mode
 keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
+
+keymap("x", "<leader>p", [["_dP"]])
+keymap({"n", "v"}, "<leader>y", [["+y]])
+keymap("n", "<leader>Y", [["+Y]])
+keymap({"n", "v"}, "<leader>p", [["+p"]])
+keymap({"n", "v"}, "<leader>P", [["+P"]])
+
+-- vnoremap  <leader>y  "+y
+-- nnoremap  <leader>Y  "+yg_
+-- nnoremap  <leader>y  "+y
+-- nnoremap  <leader>yy  "+yy
+--
+-- " " Paste from clipboard
+-- nnoremap <leader>p "+p
+-- nnoremap <leader>P "+P
+-- vnoremap <leader>p "+p
+-- vnoremap <leader>P "+P
