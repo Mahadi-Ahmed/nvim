@@ -9,6 +9,7 @@
 - [x] nvim undo tree - https://github.com/mbbill/undotree
 - [x] Fix folds & folding
 - [x] create fallback for leader f to find files if vim is used in a non git folder
+- [] add snippets functionality via lspZero [Add an external collection of snippets](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/autocomplete.md#add-an-external-collection-of-snippets)
 - [] add [markdown preview plugin](https://github.com/iamcco/markdown-preview.nvim)
 - [] Fix so you can see workspace diagnstics (look into leader l w in lvim)
 
