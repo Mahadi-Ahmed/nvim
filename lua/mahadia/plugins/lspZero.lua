@@ -37,6 +37,13 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format({ async = true }) end, opts)
 end)
 
+lsp.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
+})
+
 lsp.setup()
 
 vim.diagnostic.config({
@@ -48,7 +55,7 @@ local cmp = require('cmp')
 
 cmp.setup({
   mapping = {
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
   }
 })
 
