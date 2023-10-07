@@ -120,7 +120,8 @@ local mappings = {
   -- Actual mappings in lspZero.lua
   l = {
     name = 'LSP',
-    w = { 'workspace symbols' },
+    W = { 'workspace symbols' },
+    w = { "<cmd>Telescope diagnostics<cr>", "diagnostics" },
     i = { 'declarations' },
     o = { 'open float' },
     j = { 'next diagnostic' },
