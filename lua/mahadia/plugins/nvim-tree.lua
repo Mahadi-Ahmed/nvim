@@ -32,7 +32,6 @@ nvimtree.setup({
     cursorline = true,
     debounce_delay = 15,
     width = 30,
-    hide_root_folder = false,
     side = "left",
     preserve_window_proportions = false,
     number = false,
@@ -58,7 +57,8 @@ nvimtree.setup({
     full_name = false,
     highlight_opened_files = "none",
     highlight_modified = "none",
-    root_folder_label = ":~:s?$?/..?",
+    -- root_folder_label = ":~:s?$?/..?",
+    root_folder_label = false,
     indent_width = 2,
     indent_markers = {
       enable = false,

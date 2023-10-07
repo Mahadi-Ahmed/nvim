@@ -31,6 +31,7 @@ vim.opt.showtabline = 2
 vim.opt.guifont = "FiraCode Nerd Font:h16"
 
 vim.opt.wrap = false -- line wrapping
+vim.opt.splitright = true --force all vertical splits to go to the right of current window
 
 -- vim.opt.completeopt = { "menuone", "noselect" } -- set behaviour for popup completion 
 
