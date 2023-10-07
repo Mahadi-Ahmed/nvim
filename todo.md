@@ -9,11 +9,11 @@
 - [x] nvim undo tree - https://github.com/mbbill/undotree
 - [x] Fix folds & folding
 - [x] create fallback for leader f to find files if vim is used in a non git folder
-- [] add snippets functionality via lspZero [Add an external collection of snippets](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/autocomplete.md#add-an-external-collection-of-snippets)
-- [] add [markdown preview plugin](https://github.com/iamcco/markdown-preview.nvim)
-- [] Fix so you can see workspace diagnstics (look into leader l w in lvim)
+- [x] add snippets functionality via lspZero [Add an external collection of snippets](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/autocomplete.md#add-an-external-collection-of-snippets)
+- [] Try out this [fold](https://old.reddit.com/r/neovim/comments/16xz3q9/treesitter_highlighted_folds_are_now_in_neovim/) after updating neovim
+- [] Fix so you can see workspace diagnostics (look into leader l w in lvim)
 
-  - [] create persistent undotree
+- [x] create persistent undotree
 - [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
 - [x] Customize Lualine
   - [] list amount of lsp servers running 
@@ -36,8 +36,7 @@
 - [] Configure [Null-ls](https://www.youtube.com/watch?v=e3xxkEbhG0o)
 
 ### Telescope
-- [] Telescope find text window [theme](https://github.com/nvim-telescope/telescope.nvim#themes) 
-- [] Telescope: Fix so you can find files that are in gitignore
+- [x] Telescope: Fix so you can find files that are in gitignore
 - [x] Telescope: leader f - mirror how it works in lunarvim 1.2
 
 - [x] Fix transparent background 
@@ -51,6 +50,8 @@
 - [] vim-targets - https://github.com/wellle/targets.vim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
 - [] trailblazer, stack based mark system(https://github.com/LeonHeidelbach/trailblazer.nvim)
+- [] actions-preview - preview lsp code actions(https://github.com/aznhe21/actions-preview.nvim)
+- [] BufferTabs - an unusual bufferline (https://github.com/tomiis4/BufferTabs.nvim)
 
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder

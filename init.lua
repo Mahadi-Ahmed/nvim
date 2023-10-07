@@ -38,7 +38,7 @@ require 'mahadia.plugins.gitsigns'
 
 
 -- uncommented since i havent implemented persistent undotree yet
--- require 'mahadia.plugins.undotree'
+require 'mahadia.plugins.undotree'
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
