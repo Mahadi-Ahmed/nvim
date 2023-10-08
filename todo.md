@@ -52,6 +52,7 @@
 - [] trailblazer, stack based mark system(https://github.com/LeonHeidelbach/trailblazer.nvim)
 - [] actions-preview - preview lsp code actions(https://github.com/aznhe21/actions-preview.nvim)
 - [] BufferTabs - an unusual bufferline (https://github.com/tomiis4/BufferTabs.nvim)
+- [] autoSession - auto-session will try to restore an existing session for the current cwd if one exists.(https://github.com/rmagatti/auto-session)
 
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
