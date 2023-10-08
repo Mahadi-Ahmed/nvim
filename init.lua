@@ -35,6 +35,7 @@ require 'mahadia.plugins.harpoon'
 require 'mahadia.plugins.autopairs'
 require 'mahadia.plugins.toggleterm'
 require 'mahadia.plugins.gitsigns'
+require 'mahadia.plugins.autoSession'
 
 
 -- uncommented since i havent implemented persistent undotree yet

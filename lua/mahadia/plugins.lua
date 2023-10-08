@@ -106,6 +106,7 @@ local plugins = {
       "ColorizerToggle"
     }
   },
+  { 'rmagatti/auto-session' },
 
   {
     'goolord/alpha-nvim',
