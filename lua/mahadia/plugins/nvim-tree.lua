@@ -13,7 +13,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 nvimtree.setup({
-  auto_reload_on_write = true,
+  auto_reload_on_write = false,
   disable_netrw = false,
   hijack_cursor = false,
   hijack_netrw = true,
@@ -21,13 +21,14 @@ nvimtree.setup({
   sort_by = "name",
   root_dirs = {},
   prefer_startup_root = false,
-  sync_root_with_cwd = false,
+  sync_root_with_cwd = true,
   reload_on_bufenter = false,
   respect_buf_cwd = false,
   on_attach = "default",
   -- remove_keymaps = false,
   select_prompts = false,
   view = {
+    -- hide_root_folder = false,
     centralize_selection = false,
     cursorline = true,
     debounce_delay = 15,
@@ -53,12 +54,10 @@ nvimtree.setup({
   renderer = {
     add_trailing = false,
     group_empty = false,
-    highlight_git = false,
+    highlight_git = true,
     full_name = false,
     highlight_opened_files = "none",
-    highlight_modified = "none",
-    -- root_folder_label = ":~:s?$?/..?",
-    root_folder_label = false,
+    root_folder_label = ":t",
     indent_width = 2,
     indent_markers = {
       enable = false,
@@ -84,7 +83,7 @@ nvimtree.setup({
         -- modified = true,
       },
       glyphs = {
-        default = "",
+        default = "",
         symlink = "",
         bookmark = Icons.ui.BookMark,
         -- modified = "●",
@@ -105,7 +104,7 @@ nvimtree.setup({
           renamed = Icons.git.FileRenamed,
           untracked = Icons.git.FileUntracked,
           deleted = Icons.git.FileDeleted,
-          ignored = Icons.git.FileIgnored,
+          ignored = ""
         },
       },
     },
@@ -118,13 +117,14 @@ nvimtree.setup({
   },
   update_focused_file = {
     enable = true,
+    debounce_delay = 15,
     update_root = true,
     ignore_list = {},
   },
-  system_open = {
-    cmd = "",
-    args = {},
-  },
+  -- system_open = {
+  --   cmd = "",
+  --   args = {},
+  -- },
   diagnostics = {
     enable = false,
     show_on_dirs = false,
@@ -155,7 +155,7 @@ nvimtree.setup({
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     show_on_dirs = true,
     show_on_open_dirs = true,
     disable_for_dirs = {},
