@@ -47,7 +47,6 @@
 - [x] vim-surround - https://github.com/tpope/vim-surround
 - [] replaceWithRegister - https://github.com/vim-scripts/ReplaceWithRegister
 - [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
-- [] vim-targets - https://github.com/wellle/targets.vim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
 - [] trailblazer, stack based mark system(https://github.com/LeonHeidelbach/trailblazer.nvim)
 - [] actions-preview - preview lsp code actions(https://github.com/aznhe21/actions-preview.nvim)
