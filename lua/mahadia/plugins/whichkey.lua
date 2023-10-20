@@ -184,6 +184,10 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
+  m = {
+    r = { 'Restore session for cwd' },
+    s = { 'Save session for auto session root dir' },
+  }
 }
 
 which_key.setup(setup)
