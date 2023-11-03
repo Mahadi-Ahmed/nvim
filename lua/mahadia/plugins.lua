@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Install your plugins here
 local plugins = {
   -- My plugins here
-  { "folke/lazy.nvim", tag = "stable" },
+  { "folke/lazy.nvim",      tag = "stable" },
   { "nvim-lua/plenary.nvim" }, -- Useful lua functions used ny lots of plugins
   -- Colorschemes
   {
@@ -69,16 +69,16 @@ local plugins = {
   { "nvim-lualine/lualine.nvim" },
   -- fuzzy finding w/ telescope
   {
-	  'nvim-telescope/telescope.nvim',
-	  tag = '0.1.0',
-	  dependencies = { {'nvim-lua/plenary.nvim'}, {'nvim-telescope/telescope-fzf-native.nvim'} }
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.4',
+    dependencies = { { 'nvim-lua/plenary.nvim' }, { 'nvim-telescope/telescope-fzf-native.nvim' } }
   },
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
-  { "ThePrimeagen/harpoon" },                                   -- Harpoon
+  { "nvim-telescope/telescope-fzf-native.nvim",    build = "make",                                  lazy = true },
+  { "ThePrimeagen/harpoon" }, -- Harpoon
 
   { 'JoosepAlviste/nvim-ts-context-commentstring', dependencies = 'nvim-treesitter/nvim-treesitter' },
   { "windwp/nvim-autopairs" },
-    -- Terminal
+  -- Terminal
   {
     "akinsho/toggleterm.nvim",
     branch = "main",
@@ -100,7 +100,8 @@ local plugins = {
     branch = "main",
     event = "User FileOpened",
   },
-  { 'norcalli/nvim-colorizer.lua',
+  {
+    'norcalli/nvim-colorizer.lua',
     lazy = true,
     cmd = {
       "ColorizerToggle"
@@ -113,7 +114,7 @@ local plugins = {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       -- require'alpha'.setup(require'alpha.themes.dashboard'.config)
-      require'alpha'.setup(require'alpha.themes.theta'.config)
+      require 'alpha'.setup(require 'alpha.themes.theta'.config)
       -- require'alpha'.setup(require'alpha.themes.startify'.config)
     end,
     event = "VimEnter"
@@ -165,7 +166,11 @@ local plugins = {
   { 'kshenoy/vim-signature' },
 
   --vim-tmux-navigator
-  { 'christoomey/vim-tmux-navigator' },
+  {
+    'christoomey/vim-tmux-navigator',
+    event = "BufReadPre"
+
+  },
   { 'dstein64/vim-startuptime' },
 }
 
