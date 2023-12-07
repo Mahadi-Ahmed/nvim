@@ -35,9 +35,9 @@ treesitter.setup({
     "vue"
     -- "python"
   },
-  context_commentstring = {
-    enable = true,
-  },
+  -- context_commentstring = {
+  --   enable = true,
+  -- },
   -- auto install above language parsers
   auto_install = true,
   -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
