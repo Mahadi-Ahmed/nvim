@@ -43,7 +43,12 @@ vim.opt.undofile = true  -- enable persistent undo
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.g["sneak#label"] = true
 
-vim.opt.foldlevel = 20
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldlevel = 20
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 vim.g.skip_ts_context_commentstring_module = true
+

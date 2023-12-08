@@ -201,6 +201,8 @@ local plugins = {
     'stevearc/dressing.nvim',
     opts = {},
   },
+  {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async', event = "VeryLazy" },
+  { 'metakirby5/codi.vim', event = "VeryLazy" },
   { 'dstein64/vim-startuptime' },
 }
 
