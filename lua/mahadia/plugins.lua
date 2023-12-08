@@ -171,6 +171,11 @@ local plugins = {
     event = "BufReadPre"
 
   },
+  -- https://github.com/stevearc/dressing.nvim
+  {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
   { 'dstein64/vim-startuptime' },
 }
 

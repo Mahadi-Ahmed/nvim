@@ -12,6 +12,7 @@
 - [x] add snippets functionality via lspZero [Add an external collection of snippets](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/autocomplete.md#add-an-external-collection-of-snippets)
 - [] Try out this [fold](https://old.reddit.com/r/neovim/comments/16xz3q9/treesitter_highlighted_folds_are_now_in_neovim/) after updating neovim
 - [x] Fix so you can see workspace diagnostics (look into leader l w in lvim)
+- [] create a keymap for :%!jq . to format json
 
 - [x] create persistent undotree
 - [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
@@ -52,6 +53,9 @@
 - [] actions-preview - preview lsp code actions(https://github.com/aznhe21/actions-preview.nvim)
 - [] BufferTabs - an unusual bufferline (https://github.com/tomiis4/BufferTabs.nvim)
 - [x] autoSession - auto-session will try to restore an existing session for the current cwd if one exists.(https://github.com/rmagatti/auto-session)
+- [] nvim-focus - Always have a nice view over your split windows(https://github.com/nvim-focus/focus.nvim)
+- [] vim-sort-motion - ability to sort in Vim using text objects and motions(https://github.com/christoomey/vim-sort-motion)
+- [x] dressing.nvim - for amazing aesthetics(https://github.com/stevearc/dressing.nvim)
 
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
