@@ -56,6 +56,7 @@
 - [] nvim-focus - Always have a nice view over your split windows(https://github.com/nvim-focus/focus.nvim)
 - [] vim-sort-motion - ability to sort in Vim using text objects and motions(https://github.com/christoomey/vim-sort-motion)
 - [x] dressing.nvim - for amazing aesthetics(https://github.com/stevearc/dressing.nvim)
+- [x] wtf.nvim - A Neovim plugin to help you work out what the fudge that diagnostic means and how to fix it!(https://github.com/piersolenski/wtf.nvim)
 
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
