@@ -74,7 +74,7 @@ local plugins = {
     dependencies = { { 'nvim-lua/plenary.nvim' }, { 'nvim-telescope/telescope-fzf-native.nvim' } }
   },
   { "nvim-telescope/telescope-fzf-native.nvim",    build = "make",                                  lazy = true },
-  { "ThePrimeagen/harpoon" }, -- Harpoon
+  { "ThePrimeagen/harpoon" },
 
   { 'JoosepAlviste/nvim-ts-context-commentstring', dependencies = 'nvim-treesitter/nvim-treesitter' },
   { "windwp/nvim-autopairs" },

@@ -1,5 +1,6 @@
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
+  - [] Migrate to harpoon2 (https://github.com/ThePrimeagen/harpoon/tree/harpoon2?tab=readme-ov-file)
   - [x] Increase size of harpoon menu window
 - [x] Fix yank highlight
 - [x] vim-maximizer - Toggle split window between maximized and split
