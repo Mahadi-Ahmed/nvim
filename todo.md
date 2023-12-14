@@ -1,3 +1,4 @@
+- [] Optimize config, use nvim --startuptime saveOutput.txt to help analyze
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
   - [] Migrate to harpoon2 (https://github.com/ThePrimeagen/harpoon/tree/harpoon2?tab=readme-ov-file)
