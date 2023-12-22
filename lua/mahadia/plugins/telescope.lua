@@ -56,7 +56,7 @@ telescope.setup({
           end,
         },
       },
-      file_ignore_patterns = {},
+      file_ignore_patterns = { "lock" },
       path_display = { "smart" },
       winblend = 0,
       border = {},

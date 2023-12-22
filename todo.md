@@ -14,6 +14,7 @@
 - [x] add snippets functionality via lspZero [Add an external collection of snippets](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/autocomplete.md#add-an-external-collection-of-snippets)
 - [] Try out this [fold](https://old.reddit.com/r/neovim/comments/16xz3q9/treesitter_highlighted_folds_are_now_in_neovim/) after updating neovim
 - [x] Fix so you can see workspace diagnostics (look into leader l w in lvim)
+- [x] make the command <leader> st live grep ignore stuff in lock files
 - [] create a keymap for :%!jq . to format json
 
 - [x] create persistent undotree
