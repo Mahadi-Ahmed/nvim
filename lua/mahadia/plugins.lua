@@ -178,17 +178,17 @@ local plugins = {
     },
     opts = {},
     keys = {
-      {
-        "gw",
-        mode = { "n", "x" },
-        function()
-          require("wtf").ai()
-        end,
-        desc = "Debug diagnostic with AI",
-      },
+      -- {
+      --   "gw",
+      --   mode = { "n", "x" },
+      --   function()
+      --     require("wtf").ai()
+      --   end,
+      --   desc = "Debug diagnostic with AI",
+      -- },
       {
         mode = { "n" },
-        "gW",
+        "gw",
         function()
           require("wtf").search()
         end,
@@ -204,6 +204,7 @@ local plugins = {
   {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async', event = "VeryLazy" },
   { 'metakirby5/codi.vim', event = "VeryLazy" },
   { 'dstein64/vim-startuptime' },
+  { "zaldih/themery.nvim", lazy = true },
 }
 
 -- require("lazy").setup(plugins, { defaults = { lazy = true } })
