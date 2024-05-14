@@ -38,6 +38,6 @@ themery.setup({
       after = [[-- Same as before, but after if you need it]]
     }
   },
-  themeConfigFile = "./themery/theme.lue",
+  themeConfigFile = "~/.config/nvim/lua/mahadia/plugins/theme.lua",
   livePreview = true,
 })
