@@ -1,4 +1,5 @@
 - [] Optimize config, use nvim --startuptime saveOutput.txt to help analyze
+- [] Add [Themery](https://github.com/zaldih/themery.nvim) to be able to change themes fast
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
   - [] Migrate to harpoon2 (https://github.com/ThePrimeagen/harpoon/tree/harpoon2?tab=readme-ov-file)
