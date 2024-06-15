@@ -1,4 +1,6 @@
 - [] Optimize config, use nvim --startuptime saveOutput.txt to help analyze
+- [] Create a keymap to copy entire fiile to clipboard regardless of where in file cursor is located
+- [] create a keymap for :%!jq . to format json
 - [x] Add [Themery](https://github.com/zaldih/themery.nvim) to be able to change themes fast
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
@@ -16,7 +18,6 @@
 - [] Try out this [fold](https://old.reddit.com/r/neovim/comments/16xz3q9/treesitter_highlighted_folds_are_now_in_neovim/) after updating neovim
 - [x] Fix so you can see workspace diagnostics (look into leader l w in lvim)
 - [x] make the command <leader> st live grep ignore stuff in lock files
-- [] create a keymap for :%!jq . to format json
 
 - [x] create persistent undotree
 - [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
