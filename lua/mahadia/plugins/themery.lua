@@ -36,6 +36,22 @@ themery.setup({
       vim.opt.background = "light"
     ]],
       after = [[-- Same as before, but after if you need it]]
+    },
+    {
+      name = "kanagawa-lotus",
+      colorscheme = "kanagawa",
+      before = [[
+      vim.opt.background = "light"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
+    {
+      name = "kanagawa",
+      colorscheme = "kanagawa",
+      before = [[
+      vim.opt.background = "dark"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
     }
   },
   themeConfigFile = "~/.config/nvim/lua/mahadia/plugins/theme.lua",

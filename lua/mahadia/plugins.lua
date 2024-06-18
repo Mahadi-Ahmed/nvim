@@ -24,6 +24,7 @@ local plugins = {
     name = 'rose-pine'
   },
   { "ellisonleao/gruvbox.nvim", name = 'gruvbox', lazy = true },
+  { "rebelot/kanagawa.nvim", name = 'kanagawa', lazy = true },
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
