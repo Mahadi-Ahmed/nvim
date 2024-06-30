@@ -65,6 +65,7 @@
 - [] mini.nvim - Navigate file system using column view (Miller columns) to display nested directories (https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md)
 - [] oil.nvim - lets you edit your filesystem like a normal Neovim buffer.(https://github.com/stevearc/oil.nvim)
 - [] A minimal REST-Client Interface for Neovim(https://github.com/mistweaverco/kulala.nvim)
+- [] look into setting up [go.nvim](https://github.com/ray-x/go.nvim)
 
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
