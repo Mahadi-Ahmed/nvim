@@ -64,8 +64,9 @@
 - [x] wtf.nvim - A Neovim plugin to help you work out what the fudge that diagnostic means and how to fix it!(https://github.com/piersolenski/wtf.nvim)
 - [] mini.nvim - Navigate file system using column view (Miller columns) to display nested directories (https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md)
 - [] oil.nvim - lets you edit your filesystem like a normal Neovim buffer.(https://github.com/stevearc/oil.nvim)
-- [] A minimal REST-Client Interface for Neovim(https://github.com/mistweaverco/kulala.nvim)
+- [] A minimal [REST-Client Interface for Neovim](https://github.com/mistweaverco/kulala.nvim)
 - [] look into setting up [go.nvim](https://github.com/ray-x/go.nvim)
+- [] Establish good command workflow and quit bad habit[hardtime](https://github.com/m4xshen/hardtime.nvim)
 
 ### Nvim Tree Settings & Configuration
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
