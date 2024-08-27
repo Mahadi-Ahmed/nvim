@@ -25,14 +25,14 @@ local setup = {
   },
   -- add operators that will trigger motion and text object completion
   -- to enable all native operators, set the preset / operators plugin above
-  operators = { gc = "Comments" },
-  key_labels = {
-    -- override the label used to display some keys. It doesn't effect WK in any other way.
-    -- For example:
-    -- ["<space>"] = "SPC",
-    ["<cr>"] = "RET",
-    -- ["<tab>"] = "TAB",
-  },
+  -- operators = { gc = "Comments" },
+  -- key_labels = {
+  --   -- override the label used to display some keys. It doesn't effect WK in any other way.
+  --   -- For example:
+  --   -- ["<space>"] = "SPC",
+  --   ["<cr>"] = "RET",
+  --   -- ["<tab>"] = "TAB",
+  -- },
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
     separator = "➜", -- symbol used between a key and it's label
@@ -55,18 +55,18 @@ local setup = {
     spacing = 4,                                                                -- spacing between columns
     align = "center",                                                           -- align columns left, center or right
   },
-  ignore_missing = true,                                                        -- enable this to hide mappings for which you didn't specify a label
-  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
+  -- ignore_missing = true,                                                        -- enable this to hide mappings for which you didn't specify a label
+  -- hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
   show_help = true,                                                             -- show help message on the command line when the popup is visible
   triggers = "auto",                                                            -- automatically setup triggers
   -- triggers = {"<leader>"} -- or specify a list manually
-  triggers_blacklist = {
-    -- list of mode / prefixes that should never be hooked by WhichKey
-    -- this is mostly relevant for key maps that start with a native binding
-    -- most people should not need to change this
-    i = { "j", "k" },
-    v = { "j", "k" },
-  },
+  -- triggers_blacklist = {
+  --   -- list of mode / prefixes that should never be hooked by WhichKey
+  --   -- this is mostly relevant for key maps that start with a native binding
+  --   -- most people should not need to change this
+  --   i = { "j", "k" },
+  --   v = { "j", "k" },
+  -- },
 }
 
 local opts = {
@@ -89,6 +89,7 @@ local mappings = {
       local _, builtin = pcall(require, "telescope.builtin")
       local _, themes = pcall(require, "telescope.themes")
       local ok = pcall(builtin.git_files, themes.get_dropdown({previewer = false}))
+      -- local ok = pcall(builtin.git_files)
 
       if not ok then
         -- builtin.find_files(themes.get_dropdown({previewer = false}))
