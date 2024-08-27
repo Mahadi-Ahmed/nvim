@@ -57,7 +57,10 @@ local plugins = {
   {
     "folke/which-key.nvim",
     cmd = "WhichKey",
-    event = "VeryLazy"
+    event = "VeryLazy",
+    dependencies = {
+      'echasnovski/mini.icons', version = false
+    }
   },
   -- Window Stuff
   { "szw/vim-maximizer" }, -- maximized and restore current window
