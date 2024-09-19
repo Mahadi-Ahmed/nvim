@@ -3,7 +3,8 @@ if not setup then
   return
 end
 
-themery.setup({
+-- themery.setup({
+require("themery").setup({
   themes = {
     {
       name = "Gruvbox dark",
@@ -54,6 +55,7 @@ themery.setup({
       after = [[-- Same as before, but after if you need it]]
     }
   },
-  themeConfigFile = "~/.config/nvim/lua/mahadia/plugins/theme.lua",
+  themeConfigFile = "/Users/mahadiahmed/.config/nvim/lua/mahadia/plugins/theme.lua",
+  -- themeConfigFile = "~/.config/nvim/lua/mahadia/plugins/theme.lua",
   livePreview = true,
 })
