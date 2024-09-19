@@ -5,7 +5,7 @@ end
 
 auto_session.setup({
   auto_session_supress_dirs = { "~/", "~/Dev/", "~/Downloads", "~/Documents", "~/Desktop/" },
-  auto_restore_enabled = false,
+  auto_restore = false,
   -- auto_save_enabled = true,
 })
 
