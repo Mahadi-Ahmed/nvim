@@ -23,8 +23,8 @@ local plugins = {
     priority = 1000,
     name = 'rose-pine'
   },
-  { "ellisonleao/gruvbox.nvim", name = 'gruvbox', lazy = true },
-  { "rebelot/kanagawa.nvim", name = 'kanagawa', lazy = true },
+  { "ellisonleao/gruvbox.nvim", name = 'gruvbox',  lazy = true },
+  { "rebelot/kanagawa.nvim",    name = 'kanagawa', lazy = true },
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
@@ -69,6 +69,11 @@ local plugins = {
     "tpope/vim-surround",
   },
   { "justinmk/vim-sneak" },
+  {
+    "m4xshen/hardtime.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {}
+  },
   -- statusLine
   { "nvim-lualine/lualine.nvim" },
   -- fuzzy finding w/ telescope
@@ -206,10 +211,10 @@ local plugins = {
     'stevearc/dressing.nvim',
     opts = {},
   },
-  {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async', event = "VeryLazy" },
-  { 'metakirby5/codi.vim', event = "VeryLazy" },
+  { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "VeryLazy" },
+  { 'metakirby5/codi.vim',     event = "VeryLazy" },
   { 'dstein64/vim-startuptime' },
-  { "zaldih/themery.nvim", lazy = true },
+  { "zaldih/themery.nvim",     lazy = true },
 }
 
 -- require("lazy").setup(plugins, { defaults = { lazy = true } })

@@ -39,6 +39,7 @@ require 'mahadia.plugins.toggleterm'
 require 'mahadia.plugins.gitsigns'
 require 'mahadia.plugins.autoSession'
 require 'mahadia.plugins.ufo'
+require 'mahadia.plugins.hardtime'
 
 
 -- uncommented since i havent implemented persistent undotree yet
