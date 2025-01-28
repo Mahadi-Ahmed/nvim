@@ -86,6 +86,7 @@ local plugins = {
   {
     "akinsho/toggleterm.nvim",
     branch = "main",
+    event = "VeryLazy",
     cmd = {
       "ToggleTerm",
       "TermExec",

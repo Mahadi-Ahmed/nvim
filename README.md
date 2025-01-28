@@ -38,9 +38,6 @@
   - [x] Add command to select buffer to close 
   - [x] Add keybindings & map then in whichkey
 
-### Look into null-ls
-- [] Configure [Null-ls](https://www.youtube.com/watch?v=e3xxkEbhG0o)
-
 ### Telescope
 - [x] Telescope: Fix so you can find files that are in gitignore
 - [x] Telescope: leader f - mirror how it works in lunarvim 1.2
@@ -54,11 +51,7 @@
 - [] replaceWithRegister - https://github.com/vim-scripts/ReplaceWithRegister
 - [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
-- [] trailblazer, stack based mark system(https://github.com/LeonHeidelbach/trailblazer.nvim)
-- [] actions-preview - preview lsp code actions(https://github.com/aznhe21/actions-preview.nvim)
-- [] BufferTabs - an unusual bufferline (https://github.com/tomiis4/BufferTabs.nvim)
 - [x] autoSession - auto-session will try to restore an existing session for the current cwd if one exists.(https://github.com/rmagatti/auto-session)
-- [] nvim-focus - Always have a nice view over your split windows(https://github.com/nvim-focus/focus.nvim)
 - [] vim-sort-motion - ability to sort in Vim using text objects and motions(https://github.com/christoomey/vim-sort-motion)
 - [x] dressing.nvim - for amazing aesthetics(https://github.com/stevearc/dressing.nvim)
 - [x] wtf.nvim - A Neovim plugin to help you work out what the fudge that diagnostic means and how to fix it!(https://github.com/piersolenski/wtf.nvim)
@@ -72,7 +65,7 @@
 - [x] Make it so if you toggle the explorer when a file is open it opens up nvim-tree navigates to that folder
 - [x] Remove .git folder from explorer view (Propbably no need to implement this)
 - [x] Fix so if you open a file directly nvimtree does not open first
-- [] Change so the tree doesnt use symbols instead it highlights the color of the name of of file if its dirty/new in git
+- [x] Change so the tree doesnt use symbols instead it highlights the color of the name of of file if its dirty/new in git
 
 ### Toggleterm
 - [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
