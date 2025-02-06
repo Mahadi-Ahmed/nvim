@@ -62,10 +62,10 @@ hardtime.setup({
     ["<C-P>"] = { "n", "x" },
   },
   disabled_keys = {
-    ["<Up>"] = { "", "i" },
-    ["<Down>"] = { "", "i" },
-    ["<Left>"] = { "", "i" },
-    ["<Right>"] = { "", "i" },
+    ["<Up>"] = { "n", "" },
+    ["<Down>"] = { "n", "" },
+    ["<Left>"] = { "n", "" },
+    ["<Right>"] = { "n", "" },
   },
   disabled_filetypes = {
     "Diffview*",
