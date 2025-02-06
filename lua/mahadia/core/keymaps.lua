@@ -42,11 +42,6 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 -- keymap("n", "k", "kzz")
 -- keymap("n", "j", "jzz")
 
--- ToggleTerm
-keymap("n", "<M-a>", ":ToggleTerm direction=horizontal size=15<CR>", opts)
-keymap("n", "<M-s>", ":ToggleTerm direction=vertical size=80<CR>", opts)
-keymap("n", "<M-f>", ":ToggleTerm direction=float<CR>", opts)
-
 -- visual block mode
 keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
