@@ -57,8 +57,6 @@ keymap("n", "<leader>Y", [["+Y]])
 keymap({"n", "v"}, "<leader>p", [["+p"]])
 keymap({"n", "v"}, "<leader>P", [["+P"]])
 
-keymap('n', 'zR', require('ufo').openAllFolds)
-keymap('n', 'zM', require('ufo').closeAllFolds)
 -- vnoremap  <leader>y  "+y
 -- nnoremap  <leader>Y  "+yg_
 -- nnoremap  <leader>y  "+y
