@@ -51,6 +51,7 @@ keymap({"n", "v"}, "<leader>y", [["+y]])
 keymap("n", "<leader>Y", [["+Y]])
 keymap({"n", "v"}, "<leader>p", [["+p"]])
 keymap({"n", "v"}, "<leader>P", [["+P"]])
+keymap("n", "<leader>ya", "gg\"*yG<C-o>", { desc = "Yank entire file", silent = false })
 
 -- vnoremap  <leader>y  "+y
 -- nnoremap  <leader>Y  "+yg_
