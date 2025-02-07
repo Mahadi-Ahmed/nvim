@@ -90,7 +90,7 @@ wk.add({
   { "<leader>jn", "<cmd>lua require('harpoon'):list():next()<cr>", desc = "Next mark" },
   { "<leader>ji", "<cmd>lua require('harpoon'):list():add()<cr>", desc = "Add file" },
   { "<leader>jm", "<cmd>lua require('harpoon').ui:toggle_quick_menu(require('harpoon'):list())<cr>", desc = "Toggle menu" },
-  { "<leader>jr", "<cmd>lua require('harpoon').ui:toggle_telescope(require('harpoon'):list())<cr>", desc = "Telescope Harpoon" },
+  { "<leader>jr", "<cmd>lua _G.harpoon_telescope(require('harpoon'):list())<cr>", desc = "Telescope Harpoon" },
   { "<leader>js", "<cmd>lua require('harpoon'):list():select(3)<cr>", desc = "Index 3" },
   { "<leader>lR", group = "references" },
   { "<leader>lW", group = "workspace symbols" },
