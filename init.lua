@@ -26,7 +26,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 require 'mahadia.plugins'
 
 -- Load UI components
-require 'mahadia.plugins.alpha'
 require 'mahadia.plugins.themery'
 require 'mahadia.plugins.whichkey'
 require 'mahadia.plugins.lualine'

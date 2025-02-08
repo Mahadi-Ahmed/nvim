@@ -130,18 +130,6 @@ local plugins = {
   },
   { 'rmagatti/auto-session' },
 
-  {
-    'goolord/alpha-nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    -- config = function()
-    --   require('mahadia.plugins.alpha')
-      -- require'alpha'.setup(require'alpha.themes.dashboard'.config)
-      -- require 'alpha'.setup(require 'alpha.themes.theta'.config)
-      -- require'alpha'.setup(require'alpha.themes.startify'.config)
-    -- end,
-    event = "VimEnter"
-  },
-
   -- Icons
   {
     "nvim-tree/nvim-web-devicons",
@@ -185,7 +173,7 @@ local plugins = {
     }
   },
   --vim-signature is a plugin to place, toggle and display marks.
-  { 'kshenoy/vim-signature' , lazy = true },
+  { 'kshenoy/vim-signature' }, -- NOTE: Could be replace by snacks.nvim
 
   --vim-tmux-navigator
   {
