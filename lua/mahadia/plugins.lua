@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   -- My plugins here
   { "folke/lazy.nvim",      tag = "stable" },
-  { "nvim-lua/plenary.nvim" }, -- Useful lua functions used ny lots of plugins
+  { "nvim-lua/plenary.nvim", lazy = true }, -- Useful lua functions used ny lots of plugins
   -- Colorschemes
   {
     'rose-pine/neovim',
@@ -39,7 +39,7 @@ local plugins = {
     },
     event = "User FileOpened",
   },
-  { 'windwp/nvim-ts-autotag' },
+  { 'windwp/nvim-ts-autotag' , lazy = true},
   -- file explorer
   {
     "nvim-tree/nvim-tree.lua",
@@ -51,6 +51,7 @@ local plugins = {
   {
     "numToStr/Comment.nvim",
     keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
+    lazy = true,
     event = "User FileOpened",
   },
   -- Which Key
@@ -63,14 +64,16 @@ local plugins = {
     }
   },
   -- Window Stuff
-  { "szw/vim-maximizer" }, -- maximized and restore current window
+  { "szw/vim-maximizer", lazy = true }, -- maximized and restore current window
   -- extra plugins
   {
     "tpope/vim-surround",
+    lazy = true
   },
   { "justinmk/vim-sneak" },
   {
     "m4xshen/hardtime.nvim",
+    lazy = true,
     dependencies = { "MunifTanjim/nui.nvim" },
     opts = {}
   },
@@ -86,13 +89,18 @@ local plugins = {
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" }
+    dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = true
   },
-  { 'JoosepAlviste/nvim-ts-context-commentstring', dependencies = 'nvim-treesitter/nvim-treesitter' },
-  { "windwp/nvim-autopairs" },
+  { 'JoosepAlviste/nvim-ts-context-commentstring',
+    dependencies = 'nvim-treesitter/nvim-treesitter' ,
+    lazy = true
+  },
+  { "windwp/nvim-autopairs" , lazy = true},
   -- Terminal
   {
     "akinsho/toggleterm.nvim",
+    lazy = true,
     branch = "main",
     event = "VeryLazy",
     cmd = {
@@ -106,7 +114,7 @@ local plugins = {
     -- keys = lvim.builtin.terminal.open_mapping,
     -- enabled = lvim.builtin.terminal.active,
   },
-  { 'mbbill/undotree' },
+  { 'mbbill/undotree', lazy = true },
   { 'farmergreg/vim-lastplace' },
   {
     "akinsho/bufferline.nvim",
@@ -125,11 +133,12 @@ local plugins = {
   {
     'goolord/alpha-nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
+    -- config = function()
+    --   require('mahadia.plugins.alpha')
       -- require'alpha'.setup(require'alpha.themes.dashboard'.config)
-      require 'alpha'.setup(require 'alpha.themes.theta'.config)
+      -- require 'alpha'.setup(require 'alpha.themes.theta'.config)
       -- require'alpha'.setup(require'alpha.themes.startify'.config)
-    end,
+    -- end,
     event = "VimEnter"
   },
 
@@ -176,7 +185,7 @@ local plugins = {
     }
   },
   --vim-signature is a plugin to place, toggle and display marks.
-  { 'kshenoy/vim-signature' },
+  { 'kshenoy/vim-signature' , lazy = true },
 
   --vim-tmux-navigator
   {
@@ -189,6 +198,7 @@ local plugins = {
     dependencies = {
       "MunifTanjim/nui.nvim",
     },
+    lazy = true,
     opts = {},
     keys = {
       -- {
@@ -214,8 +224,8 @@ local plugins = {
     'stevearc/dressing.nvim',
     opts = {},
   },
-  { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "VeryLazy" },
-  { 'metakirby5/codi.vim',     event = "VeryLazy" },
+  { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "VeryLazy" , lazy = true },
+  { 'metakirby5/codi.vim',     event = "VeryLazy", lazy = true },
   { 'dstein64/vim-startuptime' },
   { "zaldih/themery.nvim",     lazy = true },
 }

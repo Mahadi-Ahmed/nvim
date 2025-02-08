@@ -15,9 +15,10 @@
 - [x] Fix folds & folding
 - [x] create fallback for leader f to find files if vim is used in a non git folder
 - [x] add snippets functionality via lspZero [Add an external collection of snippets](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/autocomplete.md#add-an-external-collection-of-snippets)
-- [] Try out this [fold](https://old.reddit.com/r/neovim/comments/16xz3q9/treesitter_highlighted_folds_are_now_in_neovim/) after updating neovim
 - [x] Fix so you can see workspace diagnostics (look into leader l w in lvim)
 - [x] make the command <leader> st live grep ignore stuff in lock files
+- [] Take a look at LazyVim keybinds for ideas [LazyVim Keymaps](https://www.lazyvim.org/keymaps)
+- [] fix fancy startup dashboard with dashboard or alpha like lazyvim
 
 - [x] create persistent undotree
 - [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
@@ -39,6 +40,7 @@
   - [x] Add keybindings & map then in whichkey
 
 ### Telescope
+- [] Look into more cool stuff to do with telescope
 - [x] Telescope: Fix so you can find files that are in gitignore
 - [x] Telescope: leader f - mirror how it works in lunarvim 1.2
 
@@ -47,12 +49,11 @@
       highlight norma ctermbg=none guibg=none
 
 #### Interesting plugins to look into later
+- [] mini.ai, Extend the a/i textobjects[mini.ai](https://github.com/echasnovski/mini.ai)
 - [x] vim-surround - https://github.com/tpope/vim-surround
-- [] replaceWithRegister - https://github.com/vim-scripts/ReplaceWithRegister
 - [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
 - [x] autoSession - auto-session will try to restore an existing session for the current cwd if one exists.(https://github.com/rmagatti/auto-session)
-- [] vim-sort-motion - ability to sort in Vim using text objects and motions(https://github.com/christoomey/vim-sort-motion)
 - [x] dressing.nvim - for amazing aesthetics(https://github.com/stevearc/dressing.nvim)
 - [x] wtf.nvim - A Neovim plugin to help you work out what the fudge that diagnostic means and how to fix it!(https://github.com/piersolenski/wtf.nvim)
 - [] mini.nvim - Navigate file system using column view (Miller columns) to display nested directories (https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md)
@@ -80,17 +81,3 @@
 * Look at min 18 in ThePrimeagen video [ThePrimeagen Youtube Video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=LL)
 * [lspzero](https://github.com/VonHeikemen/lsp-zero.nvim)
 * [ftplugin](https://neovim.io/doc/user/filetype.html) & [usage of ftplugin](https://www.reddit.com/r/neovim/comments/x3zp6t/usage_of_afterftplugin_directory_for/)
-
-
----
-Startup times with packer:
-190
-207
-220
-253
-260
-199
-266
-211
---- 
-Startup time with lazy
