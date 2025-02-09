@@ -24,6 +24,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 -- Initialize plugin manager
 require 'mahadia.plugins'
+require 'mahadia.plugins.snacks'
 
 -- Load UI components
 require 'mahadia.plugins.themery'

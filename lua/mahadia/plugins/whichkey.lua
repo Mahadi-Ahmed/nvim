@@ -64,6 +64,7 @@ wk.add({
         builtin.find_files(themes.get_dropdown())
       end
     end, desc = "Find File" },
+
   { "<leader>g", group = "Git" },
   { "<leader>gC", "<cmd>Telescope git_bcommits<cr>", desc = "Checkout commit(for current file)" },
   { "<leader>gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer" },
@@ -80,6 +81,7 @@ wk.add({
   { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc = "Stage Hunk" },
   { "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc = "Undo Stage Hunk" },
   { "<leader>h", "<cmd>nohlsearch<CR>", desc = "No Highlight" },
+
   { "<leader>j", group = "Harpoon" },
   { "<leader>ja", "<cmd>lua require('harpoon'):list():select(4)<cr>", desc = "Index 4" },
   { "<leader>jd", "<cmd>lua require('harpoon'):list():select(2)<cr>", desc = "Index 2" },
@@ -92,6 +94,7 @@ wk.add({
   { "<leader>jm", "<cmd>lua require('harpoon').ui:toggle_quick_menu(require('harpoon'):list())<cr>", desc = "Toggle menu" },
   { "<leader>jr", "<cmd>lua _G.harpoon_telescope(require('harpoon'):list())<cr>", desc = "Telescope Harpoon" },
   { "<leader>js", "<cmd>lua require('harpoon'):list():select(3)<cr>", desc = "Index 3" },
+
   { "<leader>lR", group = "references" },
   { "<leader>lW", group = "workspace symbols" },
   { "<leader>la", group = "code action" },
@@ -102,10 +105,13 @@ wk.add({
   { "<leader>lo", group = "open float" },
   { "<leader>lr", group = "rename" },
   { "<leader>lw", "<cmd>Telescope diagnostics<cr>", desc = "diagnostics" },
+
   { "<leader>m", group = "Session" },
   { "<leader>mr", group = "Restore session for cwd" },
   { "<leader>ms", group = "Save session for auto session root dir" },
+
   { "<leader>q", "<cmd>qa<CR>", desc = "Quit" },
+
   { "<leader>s", group = "Search" },
   { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
   { "<leader>sR", "<cmd>Telescope registers<cr>", desc = "Registers" },
@@ -115,7 +121,8 @@ wk.add({
   { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Find Help" },
   { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
   { "<leader>st", "<cmd>Telescope live_grep<cr>", desc = "Find Text" },
-  { "<leader>t", "<cmd>ColorizerToggle<CR>", desc = "Colorizer toggle" },
-  { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Undotree toggle" },
+
+  { "<leader>tt", "<cmd>ColorizerToggle<CR>", desc = "Colorizer toggle" },
+  -- { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Undotree toggle" },
   { "<leader>w", "<cmd>w!<CR>", desc = "Save" },
 })
