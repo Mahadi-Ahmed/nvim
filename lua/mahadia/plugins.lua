@@ -39,7 +39,7 @@ local plugins = {
     },
     event = "User FileOpened",
   },
-  {'folke/snacks.nvim'},
+  { 'folke/snacks.nvim', priority = 1000, lazy = false },
   { 'windwp/nvim-ts-autotag' , lazy = true},
   -- file explorer
   {
@@ -114,7 +114,7 @@ local plugins = {
     -- keys = lvim.builtin.terminal.open_mapping,
     -- enabled = lvim.builtin.terminal.active,
   },
-  { 'mbbill/undotree', lazy = true },
+  { 'mbbill/undotree' },
   { 'farmergreg/vim-lastplace' },
   {
     "akinsho/bufferline.nvim",

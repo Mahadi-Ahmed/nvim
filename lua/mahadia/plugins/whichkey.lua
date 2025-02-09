@@ -125,6 +125,7 @@ wk.add({
   { "<leader>sR", "<cmd>Telescope registers<cr>", desc = "Registers" },
   { "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "Find open buffers" },
   { "<leader>s:", "<cmd>lua Snacks.picker.commands() <cr>", desc = "Commands" },
+  { "<leader>sl", "<cmd>lua Snacks.picker.lines() <cr>", desc = "Buffer lines" },
   { "<leader>sc", "<cmd>Telescope grep_string<cr>", desc = "Find Text under cursor" },
   { "<leader>sf", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", desc = "Find files" },
   { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Find Help" },
