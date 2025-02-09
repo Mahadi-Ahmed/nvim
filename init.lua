@@ -6,7 +6,7 @@ require 'mahadia.core.keymaps'
 -- Set up transparency once, not on every colorscheme change
 local function setup_transparency()
   local highlights = {
-    "Normal", "SignColumn", "NormalNC", "TelescopeBorder",
+    "Normal", "SignColumn", "NormalNC",
     "NvimTreeNormal", "NvimTreeNormalNC", "EndOfBuffer", "MsgArea"
   }
   local cmds = {}
@@ -36,7 +36,6 @@ require 'mahadia.plugins.bufferline'
 require 'mahadia.plugins.treesitter'
 require 'mahadia.plugins.comment'
 require 'mahadia.plugins.nvim-tree'
-require 'mahadia.plugins.telescope'
 require 'mahadia.plugins.lspZero'
 require 'mahadia.plugins.cmp'
 

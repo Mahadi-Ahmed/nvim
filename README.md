@@ -39,14 +39,9 @@
   - [x] Add command to select buffer to close 
   - [x] Add keybindings & map then in whichkey
 
-### Telescope
-- [] Look into more cool stuff to do with telescope
-- [x] Telescope: Fix so you can find files that are in gitignore
-- [x] Telescope: leader f - mirror how it works in lunarvim 1.2
-
-- [x] Fix transparent background 
-- [x] Create a autocmd file to be able to set highlight as an option
-      highlight norma ctermbg=none guibg=none
+### Snacks picker
+- [] Live grep should exclude files in gitignore
+- [] Look into more cool stuff to do with pickers
 
 #### Interesting plugins to look into later
 - [] mini.ai, Extend the a/i textobjects[mini.ai](https://github.com/echasnovski/mini.ai)

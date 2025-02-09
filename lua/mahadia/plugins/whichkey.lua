@@ -58,7 +58,7 @@ wk.add({
   { "<leader>bb", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous" },
   { "<leader>bc", "<cmd>BufferKill<CR>", desc = "Close Buffer" },
   { "<leader>be", "<cmd>BufferLinePickClose<cr>", desc = "Pick which buffer to close" },
-  { "<leader>bf", "<cmd>Telescope buffers<cr>", desc = "Find" },
+  { "<leader>bf", "<cmd>lua Snacks.picker.buffers() <cr>", desc = "Find" },
   { "<leader>bh", "<cmd>BufferLineCloseLeft<cr>", desc = "Close all to the left" },
   { "<leader>bj", "<cmd>BufferLinePick<cr>", desc = "Jump" },
   { "<leader>bl", "<cmd>BufferLineCloseRight<cr>", desc = "Close all to the right" },
@@ -66,26 +66,30 @@ wk.add({
   { "<leader>bn", "<cmd>BufferLineCycleNext<cr>", desc = "Next" },
   { "<leader>c", "<cmd>BufferKill<CR>", desc = "Close Buffer" },
   { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explorer" },
-  { "<leader>f", function()
-      local _, builtin = pcall(require, "telescope.builtin")
-      local _, themes = pcall(require, "telescope.themes")
-      local ok = pcall(builtin.git_files, themes.get_dropdown({previewer = false}))
-      if not ok then
-        builtin.find_files(themes.get_dropdown())
+  { "<leader>f",
+    function()
+      local _, snacks = pcall(require, "snacks")
+      local is_git = vim.fn.finddir('.git', '.') ~= ''
+      if is_git then
+        snacks.picker.git_files()
+      else
+        snacks.picker.files()
       end
-    end, desc = "Find File" },
+    end,
+    desc = "Find File"
+  },
 
   { "<leader>g", group = "Git" },
-  { "<leader>gC", "<cmd>Telescope git_bcommits<cr>", desc = "Checkout commit(for current file)" },
+  { "<leader>gc", "<cmd>lua Snacks.picker.git_log_file() <cr>", desc = "Checkout commit(for current file)" },
   { "<leader>gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer" },
-  { "<leader>gb", "<cmd>Telescope git_branches<cr>", desc = "Checkout branch" },
-  { "<leader>gc", "<cmd>Telescope git_commits<cr>", desc = "Checkout commit" },
-  { "<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc = "Git Diff" },
+  { "<leader>gb", "<cmd>lua Snacks.picker.git_branches() <cr>", desc = "Checkout branch" },
+  { "<leader>gC", "<cmd>lua Snacks.picker.git_log() <cr>", desc = "Checkout commit" },
+  { "<leader>gd", "<cmd>lua Snacks.picker.git_diff() <cr>", desc = "Git Diff (Hunks)" },
   { "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", desc = "Lazygit" },
   { "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", desc = "Next Hunk" },
   { "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", desc = "Prev Hunk" },
   { "<leader>gl", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc = "Blame" },
-  { "<leader>go", "<cmd>Telescope git_status<cr>", desc = "Open changed file" },
+  { "<leader>go", "<cmd>lua Snacks.picker.git_status() <cr>", desc = "Open changed file" },
   { "<leader>gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc = "Preview Hunk" },
   { "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "Reset Hunk" },
   { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc = "Stage Hunk" },
@@ -101,8 +105,8 @@ wk.add({
   { "<leader>jn", "<cmd>lua require('harpoon'):list():next()<cr>", desc = "Next mark" },
   { "<leader>ji", "<cmd>lua require('harpoon'):list():add()<cr>", desc = "Add file" },
   { "<leader>jm", "<cmd>lua require('harpoon').ui:toggle_quick_menu(require('harpoon'):list())<cr>", desc = "Toggle menu" },
-  { "<leader>jr", "<cmd>lua _G.harpoon_telescope(require('harpoon'):list())<cr>", desc = "Telescope Harpoon" },
   { "<leader>js", "<cmd>lua require('harpoon'):list():select(3)<cr>", desc = "Index 3" },
+  -- { "<leader>jr", "<cmd>lua _G.harpoon_telescope(require('harpoon'):list())<cr>", desc = "Telescope Harpoon" },
 
   { "<leader>l", group = "lsp zero" },
   { "<leader>lR", desc = "references" },
@@ -114,23 +118,23 @@ wk.add({
   { "<leader>lk", desc = "previous diagnostic" },
   { "<leader>lo", desc = "open float" },
   { "<leader>lr", desc = "rename" },
-  { "<leader>lw", "<cmd>Telescope diagnostics<cr>", desc = "diagnostics" },
+  { "<leader>lw", "<cmd>lua Snacks.picker.diagnostics() <cr>", desc = "diagnostics" },
 
   { "<leader>m", group = "Session" },
   { "<leader>mr", group = "Restore session for cwd" },
   { "<leader>ms", group = "Save session for auto session root dir" },
 
   { "<leader>s", group = "Search" },
-  { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
-  { "<leader>sR", "<cmd>Telescope registers<cr>", desc = "Registers" },
-  { "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "Find open buffers" },
+  { "<leader>sC", "<cmd>lua Snacks.picker.commands() <cr>", desc = "Commands" },
+  { "<leader>sR", "<cmd>lua Snacks.picker.registers() <cr>", desc = "Registers" },
+  { "<leader>sb", "<cmd>lua Snacks.picker.buffers() <cr>", desc = "Find open buffers" },
   { "<leader>s:", "<cmd>lua Snacks.picker.commands() <cr>", desc = "Commands" },
   { "<leader>sl", "<cmd>lua Snacks.picker.lines() <cr>", desc = "Buffer lines" },
-  { "<leader>sc", "<cmd>Telescope grep_string<cr>", desc = "Find Text under cursor" },
-  { "<leader>sf", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", desc = "Find files" },
-  { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Find Help" },
-  { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
-  { "<leader>st", "<cmd>Telescope live_grep<cr>", desc = "Find Text" },
+  { "<leader>sc", "<cmd>lua Snacks.picker.grep_word() <cr>", desc = "Find Text under cursor" },
+  { "<leader>sf", "<cmd>lua Snacks.picker.files() <cr>", desc = "Find files" },
+  { "<leader>sh", "<cmd>lua Snacks.picker.pickers() <cr>", desc = "Find pickers" },
+  { "<leader>sk", "<cmd>lua Snacks.picker.keymaps() <cr>", desc = "Keymaps" },
+  { "<leader>st", "<cmd>lua Snacks.picker.grep() <cr>", desc = "Find Text" },
 
   { "<leader>t", group = "Toggle\'s" },
   { "<leader>tt", "<cmd>ColorizerToggle<CR>", desc = "Colorizer toggle" },

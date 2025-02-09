@@ -79,13 +79,6 @@ local plugins = {
   },
   -- statusLine
   { "nvim-lualine/lualine.nvim" },
-  -- fuzzy finding w/ telescope
-  {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.8',
-    dependencies = { { 'nvim-lua/plenary.nvim' }, { 'nvim-telescope/telescope-fzf-native.nvim' } }
-  },
-  { "nvim-telescope/telescope-fzf-native.nvim",    build = "make",                                  lazy = true },
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
