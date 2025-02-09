@@ -69,7 +69,6 @@ local plugins = {
   -- extra plugins
   {
     "tpope/vim-surround",
-    lazy = true
   },
   { "justinmk/vim-sneak" },
   {
