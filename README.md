@@ -80,3 +80,4 @@
 * Look at min 18 in ThePrimeagen video [ThePrimeagen Youtube Video](https://www.youtube.com/watch?v=w7i4amO_zaE&list=LL)
 * [lspzero](https://github.com/VonHeikemen/lsp-zero.nvim)
 * [ftplugin](https://neovim.io/doc/user/filetype.html) & [usage of ftplugin](https://www.reddit.com/r/neovim/comments/x3zp6t/usage_of_afterftplugin_directory_for/)
+* [LazyVim](https://www.lazyvim.org/)
