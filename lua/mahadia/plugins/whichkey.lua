@@ -44,6 +44,14 @@ wk.setup(setup)
 
 -- Mappings
 wk.add({
+  { "<leader><space>", "<cmd>lua Snacks.picker.smart()<cr>" , desc = "Smart Find Files" },
+  { "<leader>:", "<cmd>lua Snacks.picker.command_history()<cr>", desc = "Command History" },
+  { "<leader>n", "<cmd>lua Snacks.picker.notifications() <cr>", desc = "Notification History" },
+  { "<leader>h", "<cmd>nohlsearch<CR>", desc = "No Highlight" },
+  { "<leader>q", "<cmd>qa<CR>", desc = "Quit" },
+  { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Undotree toggle" },
+  { "<leader>w", "<cmd>w!<CR>", desc = "Save" },
+
   { "<leader>b", group = "Buffers" },
   { "<leader>bb", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous" },
   { "<leader>bc", "<cmd>BufferKill<CR>", desc = "Close Buffer" },
@@ -80,7 +88,6 @@ wk.add({
   { "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "Reset Hunk" },
   { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc = "Stage Hunk" },
   { "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc = "Undo Stage Hunk" },
-  { "<leader>h", "<cmd>nohlsearch<CR>", desc = "No Highlight" },
 
   { "<leader>j", group = "Harpoon" },
   { "<leader>ja", "<cmd>lua require('harpoon'):list():select(4)<cr>", desc = "Index 4" },
@@ -95,34 +102,33 @@ wk.add({
   { "<leader>jr", "<cmd>lua _G.harpoon_telescope(require('harpoon'):list())<cr>", desc = "Telescope Harpoon" },
   { "<leader>js", "<cmd>lua require('harpoon'):list():select(3)<cr>", desc = "Index 3" },
 
-  { "<leader>lR", group = "references" },
-  { "<leader>lW", group = "workspace symbols" },
-  { "<leader>la", group = "code action" },
-  { "<leader>lf", group = "formatting" },
-  { "<leader>li", group = "declarations" },
-  { "<leader>lj", group = "next diagnostic" },
-  { "<leader>lk", group = "previous diagnostic" },
-  { "<leader>lo", group = "open float" },
-  { "<leader>lr", group = "rename" },
+  { "<leader>l", group = "lsp zero" },
+  { "<leader>lR", desc = "references" },
+  { "<leader>lW", desc = "workspace symbols" },
+  { "<leader>la", desc = "code action" },
+  { "<leader>lf", desc = "formatting" },
+  { "<leader>li", desc = "declarations" },
+  { "<leader>lj", desc = "next diagnostic" },
+  { "<leader>lk", desc = "previous diagnostic" },
+  { "<leader>lo", desc = "open float" },
+  { "<leader>lr", desc = "rename" },
   { "<leader>lw", "<cmd>Telescope diagnostics<cr>", desc = "diagnostics" },
 
   { "<leader>m", group = "Session" },
   { "<leader>mr", group = "Restore session for cwd" },
   { "<leader>ms", group = "Save session for auto session root dir" },
 
-  { "<leader>q", "<cmd>qa<CR>", desc = "Quit" },
-
   { "<leader>s", group = "Search" },
   { "<leader>sC", "<cmd>Telescope commands<cr>", desc = "Commands" },
   { "<leader>sR", "<cmd>Telescope registers<cr>", desc = "Registers" },
   { "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "Find open buffers" },
+  { "<leader>s:", "<cmd>lua Snacks.picker.commands() <cr>", desc = "Commands" },
   { "<leader>sc", "<cmd>Telescope grep_string<cr>", desc = "Find Text under cursor" },
   { "<leader>sf", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", desc = "Find files" },
   { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Find Help" },
   { "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
   { "<leader>st", "<cmd>Telescope live_grep<cr>", desc = "Find Text" },
 
+  { "<leader>t", group = "Toggle\'s" },
   { "<leader>tt", "<cmd>ColorizerToggle<CR>", desc = "Colorizer toggle" },
-  -- { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Undotree toggle" },
-  { "<leader>w", "<cmd>w!<CR>", desc = "Save" },
 })
