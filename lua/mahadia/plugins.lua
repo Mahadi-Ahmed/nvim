@@ -39,6 +39,7 @@ local plugins = {
     },
     event = "User FileOpened",
   },
+  {'folke/snacks.nvim'},
   { 'windwp/nvim-ts-autotag' , lazy = true},
   -- file explorer
   {
@@ -172,9 +173,6 @@ local plugins = {
       { 'rafamadriz/friendly-snippets' },
     }
   },
-  --vim-signature is a plugin to place, toggle and display marks.
-  { 'kshenoy/vim-signature' }, -- NOTE: Could be replace by snacks.nvim
-
   --vim-tmux-navigator
   {
     'christoomey/vim-tmux-navigator',
@@ -206,11 +204,6 @@ local plugins = {
         desc = "Search diagnostic with Google",
       },
     },
-  },
-  -- https://github.com/stevearc/dressing.nvim
-  {
-    'stevearc/dressing.nvim',
-    opts = {},
   },
   { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "VeryLazy" , lazy = true },
   { 'metakirby5/codi.vim',     event = "VeryLazy", lazy = true },
