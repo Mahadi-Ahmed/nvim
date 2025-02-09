@@ -2,6 +2,7 @@ local wk = require("which-key")
 
 -- Setup options
 local setup = {
+  preset= "modern",
   plugins = {
     marks = true,
     registers = true,
@@ -19,6 +20,7 @@ local setup = {
       g = true,
     },
   },
+  sort = { "order"},
   icons = {
     breadcrumb = "»",
     separator = "➜",
