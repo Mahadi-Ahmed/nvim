@@ -17,7 +17,7 @@
 - [x] add snippets functionality via lspZero [Add an external collection of snippets](https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/autocomplete.md#add-an-external-collection-of-snippets)
 - [x] Fix so you can see workspace diagnostics (look into leader l w in lvim)
 - [x] make the command <leader> st live grep ignore stuff in lock files
-- [] Take a look at LazyVim keybinds for ideas [LazyVim Keymaps](https://www.lazyvim.org/keymaps)
+- [x] Take a look at LazyVim keybinds for ideas [LazyVim Keymaps](https://www.lazyvim.org/keymaps)
 - [] fix fancy startup dashboard with dashboard or alpha like lazyvim
 
 - [x] create persistent undotree
@@ -41,7 +41,8 @@
 
 ### Snacks picker
 - [] Live grep should exclude files in gitignore
-- [] Look into more cool stuff to do with pickers
+- [x] Look into more cool stuff to do with pickers
+- [] Customise look of pickers
 
 #### Interesting plugins to look into later
 - [] mini.ai, Extend the a/i textobjects[mini.ai](https://github.com/echasnovski/mini.ai)

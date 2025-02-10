@@ -135,6 +135,8 @@ wk.add({
   { "<leader>sh", "<cmd>lua Snacks.picker.pickers() <cr>", desc = "Find pickers" },
   { "<leader>sk", "<cmd>lua Snacks.picker.keymaps() <cr>", desc = "Keymaps" },
   { "<leader>st", "<cmd>lua Snacks.picker.grep() <cr>", desc = "Find Text" },
+  { "<leader>sT", "<cmd>lua Snacks.picker.todo_comments() <cr>", desc = "Find Text" },
+  { "<leader>ss", "<cmd>lua Snacks.picker.spelling() <cr>", desc = "Find Text" },
 
   { "<leader>t", group = "Toggle\'s" },
   { "<leader>tt", "<cmd>ColorizerToggle<CR>", desc = "Colorizer toggle" },
