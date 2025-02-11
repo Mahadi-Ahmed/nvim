@@ -38,6 +38,7 @@ require 'mahadia.plugins.comment'
 require 'mahadia.plugins.nvim-tree'
 require 'mahadia.plugins.lspZero'
 require 'mahadia.plugins.cmp'
+require 'mahadia.plugins.noice'
 
 -- Load additional features
 require 'mahadia.plugins.harpoon'

@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Install your plugins here
 local plugins = {
   -- My plugins here
-  { "folke/lazy.nvim",      tag = "stable" },
+  { "folke/lazy.nvim",       tag = "stable" },
   { "nvim-lua/plenary.nvim", lazy = true }, -- Useful lua functions used ny lots of plugins
   -- Colorschemes
   {
@@ -39,8 +39,8 @@ local plugins = {
     },
     event = "User FileOpened",
   },
-  { 'folke/snacks.nvim', priority = 1000, lazy = false },
-  { 'windwp/nvim-ts-autotag' , lazy = true},
+  { 'folke/snacks.nvim',       priority = 1000, lazy = false },
+  { 'windwp/nvim-ts-autotag',  lazy = true },
   -- file explorer
   {
     "nvim-tree/nvim-tree.lua",
@@ -85,11 +85,12 @@ local plugins = {
     dependencies = { "nvim-lua/plenary.nvim" },
     lazy = true
   },
-  { 'JoosepAlviste/nvim-ts-context-commentstring',
-    dependencies = 'nvim-treesitter/nvim-treesitter' ,
+  {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    dependencies = 'nvim-treesitter/nvim-treesitter',
     lazy = true
   },
-  { "windwp/nvim-autopairs" , lazy = true},
+  { "windwp/nvim-autopairs",    lazy = true },
   -- Terminal
   {
     "akinsho/toggleterm.nvim",
@@ -105,7 +106,6 @@ local plugins = {
       "ToggleTermSendVisualSelection",
     },
     -- keys = lvim.builtin.terminal.open_mapping,
-    -- enabled = lvim.builtin.terminal.active,
   },
   { 'mbbill/undotree' },
   { 'farmergreg/vim-lastplace' },
@@ -128,7 +128,6 @@ local plugins = {
     "nvim-tree/nvim-web-devicons",
     lazy = true,
   },
-  -- Lua
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -197,10 +196,24 @@ local plugins = {
       },
     },
   },
-  { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "VeryLazy" , lazy = true },
-  { 'metakirby5/codi.vim',     event = "VeryLazy", lazy = true },
+  { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "VeryLazy",  lazy = true },
+  { 'metakirby5/codi.vim',     event = "VeryLazy",                          lazy = true },
   { 'dstein64/vim-startuptime' },
   { "zaldih/themery.nvim",     lazy = true },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    }
+  },
 }
 
 -- require("lazy").setup(plugins, { defaults = { lazy = true } })
