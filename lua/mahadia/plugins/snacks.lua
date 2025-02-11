@@ -17,7 +17,11 @@ snacks.setup({
     enabled = true,
     sources = {
       files = {
-        hidden = true
+        hidden = true,
+        ignored = false,
+      },
+      git_files = {
+        untracked = true
       }
     }
   },
