@@ -41,7 +41,7 @@
   - [x] Add keybindings & map then in whichkey
 
 ### Snacks picker
-- [] Live grep should exclude files in gitignore
+- [x] Live grep should exclude files in gitignore
 - [x] Look into more cool stuff to do with pickers
 - [] Customise look of pickers
 
