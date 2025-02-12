@@ -95,7 +95,7 @@ local plugins = {
     end
   },
   -- Window Stuff
-  { "szw/vim-maximizer",  event = 'BufRead', lazy = true },     -- maximized and restore current window
+  { "szw/vim-maximizer",  event = 'BufRead', lazy = true }, -- maximized and restore current window
   -- extra plugins
   {
     "tpope/vim-surround",
@@ -235,7 +235,12 @@ local plugins = {
       { 'L3MON4D3/LuaSnip' },
       -- Snippet Collection (Optional)
       { 'rafamadriz/friendly-snippets' },
-    }
+    },
+    lazy = true,
+    event = 'LazyFile',
+    config = function()
+      require('mahadia.plugins.lspZero')
+    end
   },
   --vim-tmux-navigator
   {

@@ -3,7 +3,6 @@ vim.loader.enable()
 require 'mahadia.core.options'
 require 'mahadia.core.keymaps'
 
-
 -- Set up transparency once, not on every colorscheme change
 local function setup_transparency()
   local highlights = {
@@ -25,12 +24,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 -- Initialize plugin manager
 require 'mahadia.plugins'
-
--- Load editor enhancements
-require 'mahadia.plugins.lspZero'
-require 'mahadia.plugins.cmp'
-
--- Load additional features
 
 -- autocmd creation
 local highlight_yank_group = vim.api.nvim_create_augroup('HighlightYank', { clear = true })

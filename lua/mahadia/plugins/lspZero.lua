@@ -6,7 +6,7 @@ lsp.ensure_installed({
   'ts_ls',
   'eslint',
   'lua_ls',
-  'volar'
+  'volar',
 })
 
 -- Fix Undefined global 'vim'
@@ -52,11 +52,21 @@ vim.diagnostic.config({
 
 -- Setup cmp
 local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup({
-  mapping = {
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
     ['<CR>'] = cmp.mapping.confirm({ select = false }),
-  }
+  }),
+  --- (Optional) Show source name in completion menu
+  -- formatting = cmp_format,
 })
-
 -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/autocomplete.md
