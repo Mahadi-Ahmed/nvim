@@ -37,13 +37,16 @@ local plugins = {
       "TSInstallSync",
       "TSInstallFromGrammar",
     },
-    event = "User FileOpened",
+    lazy = true,
+    event = "VeryLazy", -- NOTE: Try buff event
   },
   { 'folke/snacks.nvim',       priority = 1000, lazy = false },
   { 'windwp/nvim-ts-autotag',  lazy = true },
   -- file explorer
   {
     "nvim-tree/nvim-tree.lua",
+    lazy = true,
+    cmd = 'NvimTreeToggle',
     dependencies = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     }
@@ -53,7 +56,7 @@ local plugins = {
     "numToStr/Comment.nvim",
     keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
     lazy = true,
-    event = "User FileOpened",
+    event = "BufRead",
   },
   -- Which Key
   {
@@ -65,15 +68,16 @@ local plugins = {
     }
   },
   -- Window Stuff
-  { "szw/vim-maximizer", lazy = true }, -- maximized and restore current window
+  { "szw/vim-maximizer",event = 'BufRead' , lazy = true }, -- maximized and restore current window
   -- extra plugins
   {
     "tpope/vim-surround",
   },
-  { "justinmk/vim-sneak" },
+  { "justinmk/vim-sneak", event = 'BufRead' },
   {
     "m4xshen/hardtime.nvim",
     lazy = true,
+    event = 'BufRead',
     dependencies = { "MunifTanjim/nui.nvim" },
     opts = {}
   },
@@ -87,8 +91,9 @@ local plugins = {
   },
   {
     'JoosepAlviste/nvim-ts-context-commentstring',
+    -- cmd = 'NvimTreeToggle',
     dependencies = 'nvim-treesitter/nvim-treesitter',
-    lazy = true
+    -- lazy = true
   },
   { "windwp/nvim-autopairs",    lazy = true },
   -- Terminal
@@ -139,7 +144,7 @@ local plugins = {
     lazy = false
   },
   -- gitsigns
-  { 'lewis6991/gitsigns.nvim', lazy = true },
+  { 'lewis6991/gitsigns.nvim', event = "BufRead", lazy = true },
   -- Cmp / Autocompletion
   {
     'VonHeikemen/lsp-zero.nvim',
@@ -196,8 +201,8 @@ local plugins = {
       },
     },
   },
-  { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "VeryLazy",  lazy = true },
-  { 'metakirby5/codi.vim',     event = "VeryLazy",                          lazy = true },
+  { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "BufRead",  lazy = true },
+  { 'metakirby5/codi.vim',     event = "CmdlineEnter",                          lazy = true },
   { 'dstein64/vim-startuptime' },
   { "zaldih/themery.nvim",     lazy = true },
   {
