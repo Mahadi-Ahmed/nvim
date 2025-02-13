@@ -86,7 +86,7 @@ ins_left {
   function()
     return '▊'
   end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
+  color = { fg = colors.blue },      -- Sets highlighting of component
   padding = { left = 0, right = 1 }, -- We don't need space before this
 }
 
@@ -136,6 +136,7 @@ ins_left {
   color = { fg = colors.magenta, gui = 'bold' },
 }
 
+
 ins_left { 'location' }
 
 ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
@@ -182,8 +183,15 @@ ins_left {
 }
 
 -- Add components to right sections
+
 ins_right {
-  'o:encoding', -- option component same as &encoding in viml
+  require("noice").api.statusline.mode.get,
+  cond = require("noice").api.statusline.mode.has,
+  color = { fg = colors.magenta }
+}
+
+ins_right {
+  'o:encoding',       -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
   color = { fg = colors.green, gui = 'bold' },
@@ -201,6 +209,7 @@ ins_right {
   icon = '',
   color = { fg = colors.violet, gui = 'bold' },
 }
+
 
 ins_right {
   'diff',

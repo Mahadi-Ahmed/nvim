@@ -1,4 +1,4 @@
-- [] Optimize config, use nvim --startuptime saveOutput.txt to help analyze
+- [x] Optimize config, use nvim --startuptime saveOutput.txt to help analyze
 - [] Refactor: lspZero will stop getting updates , move to [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [x] Create a keymap to copy entire file to clipboard regardless of where in file cursor is located
 - [] create a keymap for :%!jq . to format json
@@ -46,13 +46,15 @@
 - [] Customise look of pickers
 
 #### Interesting plugins to look into later
-- [] mini.ai, Extend the a/i textobjects[mini.ai](https://github.com/echasnovski/mini.ai)
+- Look into interesting packages in mini to add features / replace existing ones:
+    - [] mini.ai, Extend the a/i textobjects[mini.ai](https://github.com/echasnovski/mini.ai)
+    - [] mini.bracketed, Navigate using brackets[mini.bracketed](https://github.com/echasnovski/mini.nvim/blob/2d0f10540efdbb1f5c480ebe19ce4de451936a5d/readmes/mini-bracketed.md)
+    - [] mini.files - Navigate file system using column view (Miller columns) to display nested directories (https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md)
 - [x] vim-surround - https://github.com/tpope/vim-surround
 - [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
 - [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
 - [x] autoSession - auto-session will try to restore an existing session for the current cwd if one exists.(https://github.com/rmagatti/auto-session)
 - [x] wtf.nvim - A Neovim plugin to help you work out what the fudge that diagnostic means and how to fix it!(https://github.com/piersolenski/wtf.nvim)
-- [] mini.nvim - Navigate file system using column view (Miller columns) to display nested directories (https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md)
 - [] oil.nvim - lets you edit your filesystem like a normal Neovim buffer.(https://github.com/stevearc/oil.nvim)
 - [] A minimal [REST-Client Interface for Neovim](https://github.com/mistweaverco/kulala.nvim)
 - [] look into setting up [go.nvim](https://github.com/ray-x/go.nvim)

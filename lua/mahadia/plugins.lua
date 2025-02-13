@@ -11,6 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local Event = require("lazy.core.handler.event")
+Event.mappings.LazyFile = { id = "LazyFile", event = { "BufReadPost", "BufNewFile", "BufWritePre" } }
+Event.mappings["User LazyFile"] = Event.mappings.LazyFile
+
 -- Install your plugins here
 local plugins = {
   -- My plugins here
@@ -38,10 +42,24 @@ local plugins = {
       "TSInstallFromGrammar",
     },
     lazy = true,
-    event = "VeryLazy", -- NOTE: Try buff event
+    event = "VeryLazy",
+    config = function()
+      require('mahadia.plugins.treesitter')
+    end
   },
-  { 'folke/snacks.nvim',       priority = 1000, lazy = false },
-  { 'windwp/nvim-ts-autotag',  lazy = true },
+  {
+    'folke/snacks.nvim',
+    priority = 1000,
+    config = function()
+      require('mahadia.plugins.snacks')
+    end,
+    lazy = false
+  },
+  {
+    'windwp/nvim-ts-autotag',
+    lazy = true,
+    event = 'LazyFile'
+  },
   -- file explorer
   {
     "nvim-tree/nvim-tree.lua",
@@ -49,14 +67,20 @@ local plugins = {
     cmd = 'NvimTreeToggle',
     dependencies = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    }
+    },
+    config = function()
+      require('mahadia.plugins.nvim-tree')
+    end
   },
   -- commenting with gc
   {
     "numToStr/Comment.nvim",
     keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
     lazy = true,
-    event = "BufRead",
+    event = "LazyFile",
+    config = function()
+      require('mahadia.plugins.comment')
+    end
   },
   -- Which Key
   {
@@ -65,59 +89,91 @@ local plugins = {
     event = "VeryLazy",
     dependencies = {
       'echasnovski/mini.icons', version = false
-    }
+    },
+    config = function()
+      require('mahadia.plugins.whichkey')
+    end
   },
   -- Window Stuff
-  { "szw/vim-maximizer",event = 'BufRead' , lazy = true }, -- maximized and restore current window
+  { "szw/vim-maximizer",  event = 'BufRead', lazy = true }, -- maximized and restore current window
   -- extra plugins
   {
     "tpope/vim-surround",
+    event = 'LazyFile'
   },
-  { "justinmk/vim-sneak", event = 'BufRead' },
+  { "justinmk/vim-sneak", event = 'LazyFile' },
   {
     "m4xshen/hardtime.nvim",
     lazy = true,
-    event = 'BufRead',
+    event = 'LazyFile',
     dependencies = { "MunifTanjim/nui.nvim" },
-    opts = {}
+    config = function()
+      require('mahadia.plugins.hardtime')
+    end,
   },
   -- statusLine
-  { "nvim-lualine/lualine.nvim" },
+  {
+    "nvim-lualine/lualine.nvim",
+    config = function()
+      require('mahadia.plugins.lualine')
+    end,
+    event = 'LazyFile'
+  },
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = true
+    config = function()
+      require('mahadia.plugins.harpoon')
+    end
   },
   {
     'JoosepAlviste/nvim-ts-context-commentstring',
-    -- cmd = 'NvimTreeToggle',
     dependencies = 'nvim-treesitter/nvim-treesitter',
-    -- lazy = true
+    lazy = true,
+    event = 'LazyFile'
   },
-  { "windwp/nvim-autopairs",    lazy = true },
-  -- Terminal
   {
+    "windwp/nvim-autopairs",
+    lazy = true,
+    event = "LazyFile",
+    config = function()
+      require('mahadia.plugins.autopairs')
+    end
+  },
+  -- Terminal
+  { --NOTE: Look into if i can replace this with snacks, only used for lazygit
     "akinsho/toggleterm.nvim",
     lazy = true,
     branch = "main",
     event = "VeryLazy",
-    cmd = {
-      "ToggleTerm",
-      "TermExec",
-      "ToggleTermToggleAll",
-      "ToggleTermSendCurrentLine",
-      "ToggleTermSendVisualLines",
-      "ToggleTermSendVisualSelection",
-    },
-    -- keys = lvim.builtin.terminal.open_mapping,
+    -- cmd = {
+    --   "ToggleTerm",
+    --   "TermExec",
+    --   "ToggleTermToggleAll",
+    --   "ToggleTermSendCurrentLine",
+    --   "ToggleTermSendVisualLines",
+    --   "ToggleTermSendVisualSelection",
+    -- },
+    config = function()
+      require('mahadia.plugins.toggleterm')
+    end
   },
-  { 'mbbill/undotree' },
+  {
+    'mbbill/undotree',
+    event = 'LazyFile',
+    config = function()
+      require('mahadia.plugins.undotree')
+    end
+  },
   { 'farmergreg/vim-lastplace' },
   {
     "akinsho/bufferline.nvim",
     branch = "main",
-    event = "User FileOpened",
+    event = "LazyFile",
+    config = function()
+      require('mahadia.plugins.bufferline')
+    end
   },
   {
     'norcalli/nvim-colorizer.lua',
@@ -126,7 +182,12 @@ local plugins = {
       "ColorizerToggle"
     }
   },
-  { 'rmagatti/auto-session' },
+  {
+    'rmagatti/auto-session',
+    config = function()
+      require('mahadia.plugins.autoSession')
+    end
+  },
 
   -- Icons
   {
@@ -144,7 +205,14 @@ local plugins = {
     lazy = false
   },
   -- gitsigns
-  { 'lewis6991/gitsigns.nvim', event = "BufRead", lazy = true },
+  {
+    'lewis6991/gitsigns.nvim',
+    event = 'LazyFile',
+    lazy = true,
+    config = function()
+      require('mahadia.plugins.gitsigns')
+    end
+  },
   -- Cmp / Autocompletion
   {
     'VonHeikemen/lsp-zero.nvim',
@@ -167,7 +235,12 @@ local plugins = {
       { 'L3MON4D3/LuaSnip' },
       -- Snippet Collection (Optional)
       { 'rafamadriz/friendly-snippets' },
-    }
+    },
+    lazy = true,
+    event = 'LazyFile',
+    config = function()
+      require('mahadia.plugins.lspZero')
+    end
   },
   --vim-tmux-navigator
   {
@@ -181,6 +254,7 @@ local plugins = {
       "MunifTanjim/nui.nvim",
     },
     lazy = true,
+    event = 'LazyFile',
     opts = {},
     keys = {
       -- {
@@ -201,23 +275,36 @@ local plugins = {
       },
     },
   },
-  { 'kevinhwang91/nvim-ufo',   dependencies = 'kevinhwang91/promise-async', event = "BufRead",  lazy = true },
-  { 'metakirby5/codi.vim',     event = "CmdlineEnter",                          lazy = true },
+  {
+    'kevinhwang91/nvim-ufo',
+    dependencies = 'kevinhwang91/promise-async',
+    event = 'BufRead',
+    lazy = true,
+    config = function()
+      require('mahadia.plugins.ufo')
+    end
+  },
+  { 'metakirby5/codi.vim',     event = "CmdlineEnter", lazy = true },
   { 'dstein64/vim-startuptime' },
-  { "zaldih/themery.nvim",     lazy = true },
+  {
+    "zaldih/themery.nvim",
+    config = function()
+      require('mahadia.plugins.themery')
+    end
+  },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
-    opts = {
-      -- add any options here
-    },
     dependencies = {
       "MunifTanjim/nui.nvim",
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
-    }
+    },
+    config = function()
+      require('mahadia.plugins.noice')
+    end
   },
 }
 
