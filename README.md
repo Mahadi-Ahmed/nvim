@@ -19,7 +19,7 @@
 - [x] Fix so you can see workspace diagnostics (look into leader l w in lvim)
 - [x] make the command <leader> st live grep ignore stuff in lock files
 - [x] Take a look at LazyVim keybinds for ideas [LazyVim Keymaps](https://www.lazyvim.org/keymaps)
-- [] fix fancy startup dashboard with dashboard or alpha like lazyvim
+- [x] fix fancy startup dashboard with dashboard or alpha like lazyvim
 
 - [x] create persistent undotree
 - [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
