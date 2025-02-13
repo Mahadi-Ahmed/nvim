@@ -6,7 +6,7 @@ end
 -- Initialize snacks with configuration
 snacks.setup({
   bigfile = { enabled = true },
-  dashboard = { enabled = true },
+  dashboard = require('mahadia.plugins.snacks.dashboard'),
   indent = { enabled = false },
   input = { enabled = true },
   notifier = {
