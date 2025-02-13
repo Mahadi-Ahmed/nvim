@@ -95,13 +95,22 @@ local plugins = {
     end
   },
   -- Window Stuff
-  { "szw/vim-maximizer",  event = 'BufRead', lazy = true }, -- maximized and restore current window
+  { "szw/vim-maximizer",       event = 'BufRead', lazy = true }, -- maximized and restore current window
   -- extra plugins
   {
     "tpope/vim-surround",
     event = 'LazyFile'
   },
-  { "justinmk/vim-sneak", event = 'LazyFile' },
+  {
+    "folke/flash.nvim",
+    event = "LazyFile",
+    opts = {},
+    keys = {
+      { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+      { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+      { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
+    },
+  },
   {
     "m4xshen/hardtime.nvim",
     lazy = true,
