@@ -31,7 +31,8 @@ snacks.setup({
   statuscolumn = { enabled = true },
   styles = {
     notification = {}
-  }
+  },
+  image = { enabled = true },
 })
 
 -- Define keymaps after ensuring snacks is loaded
