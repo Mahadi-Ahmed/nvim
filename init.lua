@@ -1,3 +1,7 @@
+-- Disable netrw at the very start, before vim.loader.enable
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.loader.enable()
 
 require 'mahadia.core.options'
@@ -25,6 +29,26 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- Initialize plugin manager
 require 'mahadia.plugins'
 
+-- Create an autocommand to show dashboard when opening a directory
+vim.api.nvim_create_autocmd("VimEnter", {
+  desc = "Open dashboard when opening a directory",
+  callback = function()
+    local arg = vim.fn.expand('%:p')
+    if vim.fn.isdirectory(arg) ~= 0 then
+      vim.cmd('enew') -- Close the directory buffer
+      vim.cmd('bwipeout ' .. vim.fn.bufnr(arg))
+
+      -- Check if Snacks is available and show dashboard
+      local setup, snacks = pcall(require, "snacks")
+      if setup then
+        vim.schedule(function()
+          snacks.dashboard.open()
+        end)
+      end
+    end
+  end,
+  group = vim.api.nvim_create_augroup("DashboardOnDirectory", { clear = true }),
+})
 -- autocmd creation
 local highlight_yank_group = vim.api.nvim_create_augroup('HighlightYank', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
