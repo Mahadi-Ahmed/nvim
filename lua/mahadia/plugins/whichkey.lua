@@ -138,6 +138,7 @@ wk.add({
   { "<leader>sT", "<cmd>lua Snacks.picker.todo_comments() <cr>", desc = "Find Text" },
   { "<leader>ss", "<cmd>lua Snacks.picker.spelling() <cr>", desc = "Find Text" },
   { "<leader>sn", "<cmd>lua require('noice').cmd('cmd') <cr>", desc = "open Notification in window" },
+  { "<leader>su", "<cmd>lua Snacks.picker.undo() <cr>", desc = "Undo History" },
 
   { "<leader>t", group = "Toggle\'s" },
   { "<leader>tt", "<cmd>ColorizerToggle<CR>", desc = "Colorizer toggle" },
