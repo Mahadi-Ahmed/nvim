@@ -1,3 +1,4 @@
+- [] Extract theme colors & remove all hardcoded colors to handle theme switching better  
 - [x] Optimize config, use nvim --startuptime saveOutput.txt to help analyze
 - [] Refactor: lspZero will stop getting updates , move to [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [x] Create a keymap to copy entire file to clipboard regardless of where in file cursor is located
