@@ -102,6 +102,12 @@ local plugins = {
     event = 'LazyFile'
   },
   {
+    "echasnovski/mini.ai",
+    event = "LazyFile",
+    version = "*", -- Use latest stable version
+    opts = {},     -- Empty opts table for default settings
+  },
+  {
     "folke/flash.nvim",
     event = "VeryLazy",
     opts = {},
