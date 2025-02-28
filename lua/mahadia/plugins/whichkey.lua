@@ -113,6 +113,7 @@ wk.add({
   { "<leader>lW", desc = "workspace symbols" },
   { "<leader>la", desc = "code action" },
   { "<leader>lf", desc = "formatting" },
+  { "<leader>lf", function() vim.lsp.buf.format() end, mode = "v", desc = "Format selection" },
   { "<leader>li", desc = "declarations" },
   { "<leader>lj", desc = "next diagnostic" },
   { "<leader>lk", desc = "previous diagnostic" },
