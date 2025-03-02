@@ -97,9 +97,17 @@ local plugins = {
   -- Window Stuff
   { "szw/vim-maximizer",       event = 'BufRead', lazy = true }, -- maximized and restore current window
   -- extra plugins
+  -- {
+  --   "tpope/vim-surround",
+  --   event = 'LazyFile'
+  -- },
+  -- mini.surround configuration with vim-surround compatible mappings
   {
-    "tpope/vim-surround",
-    event = 'LazyFile'
+    "echasnovski/mini.surround",
+    event = "VeryLazy",
+    config = function()
+      require("mahadia.plugins.mini-surround")
+    end,
   },
   {
     "echasnovski/mini.ai",
@@ -108,18 +116,11 @@ local plugins = {
     opts = {},     -- Empty opts table for default settings
   },
   {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    opts = {},
-    keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
-      { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
-      { "r", mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
-      { "R", mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-    },
-    config = function()
-      require("mahadia.plugins.flash")
-    end,
+      'folke/flash.nvim',
+      event = "VeryLazy",
+      config = function()
+        require("mahadia.plugins.flash")
+      end,
   },
   {
     "m4xshen/hardtime.nvim",
