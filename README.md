@@ -2,7 +2,6 @@
 - [x] Optimize config, use nvim --startuptime saveOutput.txt to help analyze
 - [] Refactor: lspZero will stop getting updates , move to [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [x] Create a keymap to copy entire file to clipboard regardless of where in file cursor is located
-- [] create a keymap for :%!jq . to format json
 - [x] Add [Themery](https://github.com/zaldih/themery.nvim) to be able to change themes fast
 - [x] Add nvim tree for file explorer
 - [x] Add Harpoon
@@ -49,13 +48,10 @@
 #### Interesting plugins to look into later
 - Look into interesting packages in mini to add features / replace existing ones:
     - [x] mini.ai, Extend the a/i textobjects[mini.ai](https://github.com/echasnovski/mini.ai)
-    - [] [mini.surround](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md)
-- [x] vim-surround - https://github.com/tpope/vim-surround
+    - [x] [mini.surround](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md)
 - [] lsp saga, preview defenition before jumping into it - https://github.com/glepnir/lspsaga.nvim
-- [] nvim-spectre - [search and replace](https://github.com/nvim-pack/nvim-spectre) 
 - [x] autoSession - auto-session will try to restore an existing session for the current cwd if one exists.(https://github.com/rmagatti/auto-session)
 - [x] wtf.nvim - A Neovim plugin to help you work out what the fudge that diagnostic means and how to fix it!(https://github.com/piersolenski/wtf.nvim)
-- [] oil.nvim - lets you edit your filesystem like a normal Neovim buffer.(https://github.com/stevearc/oil.nvim)
 - [] A minimal [REST-Client Interface for Neovim](https://github.com/mistweaverco/kulala.nvim)
 - [] look into setting up [go.nvim](https://github.com/ray-x/go.nvim)
 - [x] Establish good command workflow and quit bad habit[hardtime](https://github.com/m4xshen/hardtime.nvim)
@@ -67,7 +63,6 @@
 - [x] Change so the tree doesnt use symbols instead it highlights the color of the name of of file if its dirty/new in git
 
 ### Toggleterm
-- [] Refactor toggleterm to open different terminal instances depending on keybinding pressed
 - [x] toggleterm - terminal windows inside vim
 - [x] Add intigration to lazygit
 

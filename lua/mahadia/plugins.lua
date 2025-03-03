@@ -96,17 +96,11 @@ local plugins = {
   },
   -- Window Stuff
   { "szw/vim-maximizer",       event = 'BufRead', lazy = true }, -- maximized and restore current window
-  -- extra plugins
-  -- {
-  --   "tpope/vim-surround",
-  --   event = 'LazyFile'
-  -- },
-  -- mini.surround configuration with vim-surround compatible mappings
   {
     "echasnovski/mini.surround",
-    event = "VeryLazy",
+    event = "LazyFile",
     config = function()
-      require("mahadia.plugins.mini-surround")
+      require('mahadia.plugins.mini-surround')
     end,
   },
   {
