@@ -102,18 +102,18 @@ keymap({"n", "x"}, "f", function()
 end, { desc = "Flash Jump" })
 
 -- Operator-pending mode: 'f' acts like character motion
-keymap("o", "f", function()
-  require("flash").jump({ mode = "char" })
-end, { desc = "Flash f" })
+-- keymap("o", "f", function()
+--   require("flash").jump({ mode = "char" })
+-- end, { desc = "Flash f" })
 
 -- Other keymaps
 keymap({"n", "x", "o"}, "F", function()
   require("flash").jump({ mode = "char", reverse = true })
 end, { desc = "Flash F" })
 
-keymap({"n", "x", "o"}, "t", function()
-  require("flash").jump({ mode = "char", til = true })
-end, { desc = "Flash t" })
+-- keymap({"n", "x", "o"}, "t", function()
+--   require("flash").jump({ mode = "char", til = true })
+-- end, { desc = "Flash t" })
 
 -- For repeat functionality
 keymap({"n", "x", "o"}, ";", function()
