@@ -27,8 +27,15 @@ local plugins = {
     priority = 1000,
     name = 'rose-pine'
   },
-  { "ellisonleao/gruvbox.nvim", name = 'gruvbox',  lazy = true },
-  { "rebelot/kanagawa.nvim",    name = 'kanagawa', lazy = true },
+  { "ellisonleao/gruvbox.nvim", name = 'gruvbox',  lazy = true,  event = 'LazyFile' },
+  { "rebelot/kanagawa.nvim",    name = 'kanagawa', lazy = true,  event = 'LazyFile' },
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    priority = 1000,
+    event = 'LazyFile',
+    opts = {},
+  },
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
@@ -116,15 +123,15 @@ local plugins = {
         require("mahadia.plugins.flash")
       end,
   },
-  {
-    "m4xshen/hardtime.nvim",
-    lazy = true,
-    event = 'LazyFile',
-    dependencies = { "MunifTanjim/nui.nvim" },
-    config = function()
-      require('mahadia.plugins.hardtime')
-    end,
-  },
+  -- {
+  --   "m4xshen/hardtime.nvim",
+  --   lazy = true,
+  --   event = 'LazyFile',
+  --   dependencies = { "MunifTanjim/nui.nvim" },
+  --   config = function()
+  --     require('mahadia.plugins.hardtime')
+  --   end,
+  -- },
   -- statusLine
   {
     "nvim-lualine/lualine.nvim",
@@ -320,6 +327,7 @@ local plugins = {
       require('mahadia.plugins.noice')
     end
   },
+  {"ellisonleao/glow.nvim", config = true, cmd = "Glow", event = 'VeryLazy'},
 }
 
 -- require("lazy").setup(plugins, { defaults = { lazy = true } })

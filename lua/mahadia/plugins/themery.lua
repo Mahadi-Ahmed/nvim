@@ -53,7 +53,39 @@ require("themery").setup({
       vim.opt.background = "dark"
     ]],
       after = [[-- Same as before, but after if you need it]]
-    }
+    },
+    {
+      name = "tokyonight-night",
+      colorscheme = "tokyonight-night",
+      before = [[
+      vim.opt.background = "dark"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
+    {
+      name = "tokyonight-storm",
+      colorscheme = "tokyonight-storm",
+      before = [[
+      vim.opt.background = "dark"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
+    {
+      name = "tokyonight-moon",
+      colorscheme = "tokyonight-moon",
+      before = [[
+      vim.opt.background = "dark"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
+    {
+      name = "tokyonight-day",
+      colorscheme = "tokyonight-day",
+      before = [[
+      vim.opt.background = "light"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
   },
   -- themeConfigFile = "/Users/mahadiahmed/.config/nvim/lua/mahadia/plugins/theme.lua",
   -- themeConfigFile = "~/.config/nvim/lua/mahadia/plugins/theme.lua",
