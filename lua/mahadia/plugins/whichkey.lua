@@ -132,7 +132,7 @@ wk.add({
   { "<leader>s:", "<cmd>lua Snacks.picker.commands() <cr>", desc = "Commands" },
   { "<leader>sl", "<cmd>lua Snacks.picker.lines() <cr>", desc = "Buffer lines" },
   { "<leader>sc", "<cmd>lua Snacks.picker.grep_word() <cr>", desc = "Find Text under cursor" },
-  { "<leader>sf", "<cmd>lua Snacks.picker.files() <cr>", desc = "Find files" },
+  { "<leader>sf", "<cmd>lua Snacks.picker.files({ ignored = true }) <cr>", desc = "Find files" },
   { "<leader>sh", "<cmd>lua Snacks.picker.pickers() <cr>", desc = "Find pickers" },
   { "<leader>sk", "<cmd>lua Snacks.picker.keymaps() <cr>", desc = "Keymaps" },
   { "<leader>st", "<cmd>lua Snacks.picker.grep() <cr>", desc = "Find Text" },
