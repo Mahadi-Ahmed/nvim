@@ -327,7 +327,19 @@ local plugins = {
       require('mahadia.plugins.noice')
     end
   },
-  {"ellisonleao/glow.nvim", config = true, cmd = "Glow", event = 'VeryLazy'},
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow", event = 'VeryLazy' },
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = { 'rcarriga/nvim-dap-ui', 'nvim-neotest/nvim-nio', 'leoluz/nvim-dap-go' },
+    config = function()
+      require('mahadia.plugins.dap')
+    end,
+    event = 'LazyFile'
+  },
+  {
+    "folke/lazydev.nvim",
+    ft = "lua", -- only load on lua files
+  },
 }
 
 -- require("lazy").setup(plugins, { defaults = { lazy = true } })
