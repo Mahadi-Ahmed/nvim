@@ -318,9 +318,6 @@ local plugins = {
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
     },
     config = function()
@@ -330,15 +327,30 @@ local plugins = {
   { "ellisonleao/glow.nvim", config = true, cmd = "Glow", event = 'VeryLazy' },
   {
     "mfussenegger/nvim-dap",
-    dependencies = { 'rcarriga/nvim-dap-ui', 'nvim-neotest/nvim-nio', 'leoluz/nvim-dap-go' },
+    dependencies = {
+      'rcarriga/nvim-dap-ui',
+      'nvim-neotest/nvim-nio',
+      { 'leoluz/nvim-dap-go', ft = { 'go' } },
+      { 'mxsdev/nvim-dap-vscode-js', ft = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'astro', 'vue' } }
+    },
     config = function()
       require('mahadia.plugins.dap')
     end,
     event = 'LazyFile'
   },
   {
+    'microsoft/vscode-js-debug',
+    version = '1.x',
+    build = 'npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out',
+    init = function()
+      vim.fn.system { "git", "config", "--global", "--add", "safe.directory", vim.fn.stdpath "data" .. "/lazy/vscode-js-debug" }
+      vim.fn.system { "git", "config", "-f", vim.fn.stdpath "data" .. "/lazy/vscode-js-debug/.git/config", "--add", "core.fileMode", "false" }
+      vim.fn.system { "git", "-C", vim.fn.stdpath "data" .. "/lazy/vscode-js-debug", "update-index", "--assume-unchanged", "package-lock.json" }
+    end,
+  },
+  {
     "folke/lazydev.nvim",
-    ft = "lua", -- only load on lua files
+    ft = "lua",
   },
 }
 
