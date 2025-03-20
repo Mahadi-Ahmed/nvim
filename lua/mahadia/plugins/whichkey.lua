@@ -120,6 +120,7 @@ wk.add({
   { "<leader>lo", desc = "open float" },
   { "<leader>lr", desc = "rename" },
   { "<leader>lw", "<cmd>lua Snacks.picker.diagnostics() <cr>", desc = "diagnostics" },
+  { "<leader>lm", "<cmd>%!jq . <cr>", desc = "Format json" },
 
   { "<leader>m", group = "Session" },
   { "<leader>mr", group = "Restore session for cwd" },
