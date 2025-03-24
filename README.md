@@ -1,4 +1,7 @@
-- [] Look into nvim-dap to add debuggers
+- [] Look into vue lsp functionality with a small example
+- [x] Look into nvim-dap to add debuggers
+    - [] Try out all the different dap's with small examples
+
 - [] Extract theme colors & remove all hardcoded colors to handle theme switching better  
 - [x] create a keymap for :%!jq . to format json
 - [x] Optimize config, use nvim --startuptime saveOutput.txt to help analyze

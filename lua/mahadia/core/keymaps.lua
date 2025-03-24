@@ -37,8 +37,8 @@ keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
-keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-d>", "<C-d>", opts)
+keymap("n", "<C-u>", "<C-u>", opts)
 -- keymap("n", "k", "kzz")
 -- keymap("n", "j", "jzz")
 

@@ -333,9 +333,9 @@ local plugins = {
       { 'leoluz/nvim-dap-go', ft = { 'go' } },
       { 'mxsdev/nvim-dap-vscode-js', ft = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'astro', 'vue' } }
     },
-    config = function()
-      require('mahadia.plugins.dap')
-    end,
+    -- config = function()
+    --   require('mahadia.plugins.dap')
+    -- end,
     event = 'LazyFile'
   },
   {
