@@ -1,7 +1,5 @@
-- [] Look into vue lsp functionality with a small example
 - [x] Look into nvim-dap to add debuggers
     - [] Try out all the different dap's with small examples
-
 - [] Extract theme colors & remove all hardcoded colors to handle theme switching better  
 - [x] create a keymap for :%!jq . to format json
 - [x] Optimize config, use nvim --startuptime saveOutput.txt to help analyze
@@ -30,7 +28,7 @@
 - [x] Migrate to [Lazy](https://github.com/folke/lazy.nvim)
 - [x] Customize Lualine
   - [] list amount of lsp servers running 
-
+- [x] Look into vue lsp functionality with a small example[lspZero](https://lsp-zero.netlify.app/blog/configure-volar-v2.html)
 - [] Fix the title string
 - [x] Add integration to gitsigns(https://github.com/lewis6991/gitsigns.nvim)
 

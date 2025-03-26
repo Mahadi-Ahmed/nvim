@@ -20,6 +20,60 @@ lsp.configure('lua_ls', {
   }
 })
 
+-- lsp.skip_server_setup({'eslint'})
+
+lsp.configure('eslint', {
+  settings = {
+    workingDirectory = { mode = 'auto' },
+    validate = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "vue"
+    },
+    filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue' },
+    experimental = {
+      useFlatConfig = false
+    },
+    codeAction = {
+      showDocumentation = {
+        enable = true
+      }
+    }
+  },
+})
+
+-- Configure TypeScript language server for Vue support
+lsp.configure('ts_ls', function()
+  local vue_typescript_plugin = require('mason-registry')
+      .get_package('vue-language-server')
+      :get_install_path()
+      .. '/node_modules/@vue/language-server'
+      .. '/node_modules/@vue/typescript-plugin'
+
+  return {
+    init_options = {
+      plugins = {
+        {
+          name = "@vue/typescript-plugin",
+          location = vue_typescript_plugin,
+          languages = { 'javascript', 'typescript', 'vue' }
+        },
+      }
+    },
+    filetypes = {
+      'javascript',
+      'javascriptreact',
+      'javascript.jsx',
+      'typescript',
+      'typescriptreact',
+      'typescript.tsx',
+      'vue',
+    },
+  }
+end)
+
 lsp.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
 
