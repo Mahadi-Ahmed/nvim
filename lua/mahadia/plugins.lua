@@ -83,7 +83,12 @@ local plugins = {
   {
     "numToStr/Comment.nvim",
     keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
-    lazy = true,
+    dependencies = {
+      {
+        'JoosepAlviste/nvim-ts-context-commentstring',
+        dependencies = 'nvim-treesitter/nvim-treesitter',
+      }
+    },
     config = function()
       require('mahadia.plugins.comment')
     end
@@ -151,12 +156,6 @@ local plugins = {
     keys = {
       { "<leader>j", desc = "Harpoon" }
     }
-  },
-  {
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    dependencies = 'nvim-treesitter/nvim-treesitter',
-    lazy = true,
-    event = 'LazyFile'
   },
   {
     "windwp/nvim-autopairs",
