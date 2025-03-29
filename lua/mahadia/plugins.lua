@@ -46,8 +46,7 @@ local plugins = {
       "TSInstallSync",
       "TSInstallFromGrammar",
     },
-    lazy = true,
-    event = "VeryLazy",
+    event = "LazyFile",
     config = function()
       require('mahadia.plugins.treesitter')
     end
