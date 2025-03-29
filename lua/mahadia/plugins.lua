@@ -121,11 +121,11 @@ local plugins = {
     opts = {},     -- Empty opts table for default settings
   },
   {
-      'folke/flash.nvim',
-      event = "VeryLazy",
-      config = function()
-        require("mahadia.plugins.flash")
-      end,
+    'folke/flash.nvim',
+    event = "LazyFile",
+    config = function()
+      require("mahadia.plugins.flash")
+    end,
   },
   -- {
   --   "m4xshen/hardtime.nvim",
@@ -166,17 +166,8 @@ local plugins = {
   -- Terminal
   { --NOTE: Look into if i can replace this with snacks, only used for lazygit
     "akinsho/toggleterm.nvim",
-    lazy = true,
     branch = "main",
     event = "VeryLazy",
-    -- cmd = {
-    --   "ToggleTerm",
-    --   "TermExec",
-    --   "ToggleTermToggleAll",
-    --   "ToggleTermSendCurrentLine",
-    --   "ToggleTermSendVisualLines",
-    --   "ToggleTermSendVisualSelection",
-    -- },
     config = function()
       require('mahadia.plugins.toggleterm')
     end
