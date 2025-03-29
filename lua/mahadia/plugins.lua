@@ -84,7 +84,6 @@ local plugins = {
     "numToStr/Comment.nvim",
     keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
     lazy = true,
-    event = "LazyFile",
     config = function()
       require('mahadia.plugins.comment')
     end
@@ -92,7 +91,6 @@ local plugins = {
   -- Which Key
   {
     "folke/which-key.nvim",
-    cmd = "WhichKey",
     event = "VeryLazy",
     dependencies = {
       'echasnovski/mini.icons', version = false
@@ -102,7 +100,10 @@ local plugins = {
     end
   },
   -- Window Stuff
-  { "szw/vim-maximizer",       event = 'BufRead', lazy = true }, -- maximized and restore current window
+  { -- maximized and restore current window
+    "szw/vim-maximizer",
+    cmd = 'MaximizerToggle',
+  },
   {
     "echasnovski/mini.surround",
     event = "LazyFile",
@@ -146,7 +147,10 @@ local plugins = {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require('mahadia.plugins.harpoon')
-    end
+    end,
+    keys = {
+      { "<leader>j", desc = "Harpoon" }
+    }
   },
   {
     'JoosepAlviste/nvim-ts-context-commentstring',
@@ -207,7 +211,8 @@ local plugins = {
     'rmagatti/auto-session',
     config = function()
       require('mahadia.plugins.autoSession')
-    end
+    end,
+    cmd = 'SessionRestore'
   },
 
   -- Icons
@@ -274,18 +279,11 @@ local plugins = {
     dependencies = {
       "MunifTanjim/nui.nvim",
     },
-    lazy = true,
-    event = 'LazyFile',
     opts = {},
     keys = {
-      -- {
-      --   "gw",
-      --   mode = { "n", "x" },
-      --   function()
-      --     require("wtf").ai()
-      --   end,
-      --   desc = "Debug diagnostic with AI",
-      -- },
+      {
+        "gw",
+      },
       {
         mode = { "n" },
         "gw",
@@ -300,12 +298,10 @@ local plugins = {
     'kevinhwang91/nvim-ufo',
     dependencies = 'kevinhwang91/promise-async',
     event = 'BufRead',
-    lazy = true,
     config = function()
       require('mahadia.plugins.ufo')
     end
   },
-  { 'metakirby5/codi.vim',     event = "CmdlineEnter", lazy = true },
   { 'dstein64/vim-startuptime' },
   {
     "zaldih/themery.nvim",
@@ -324,7 +320,7 @@ local plugins = {
       require('mahadia.plugins.noice')
     end
   },
-  { "ellisonleao/glow.nvim", config = true, cmd = "Glow", event = 'VeryLazy' },
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
   {
     "mfussenegger/nvim-dap",
     dependencies = {
