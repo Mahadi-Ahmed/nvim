@@ -200,7 +200,7 @@ local plugins = {
     config = function()
       require('mahadia.plugins.autoSession')
     end,
-    cmd = 'SessionRestore'
+    cmd = { 'SessionRestore', 'SessionSave' }
   },
 
   -- Icons
