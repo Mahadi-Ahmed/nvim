@@ -27,14 +27,12 @@ local plugins = {
     priority = 1000,
     name = 'rose-pine'
   },
-  { "ellisonleao/gruvbox.nvim", name = 'gruvbox',  lazy = true,  event = 'LazyFile' },
-  { "rebelot/kanagawa.nvim",    name = 'kanagawa', lazy = true,  event = 'LazyFile' },
+  { "ellisonleao/gruvbox.nvim", name = 'gruvbox',  cmd = 'Themery' },
+  { "rebelot/kanagawa.nvim",    name = 'kanagawa', cmd = 'Themery' },
   {
     "folke/tokyonight.nvim",
-    lazy = true,
-    priority = 1000,
-    event = 'LazyFile',
     opts = {},
+    cmd = 'Themery'
   },
   -- Treesitter
   {
