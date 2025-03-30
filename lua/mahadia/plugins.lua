@@ -183,14 +183,14 @@ local plugins = {
     end
   },
   { 'farmergreg/vim-lastplace' },
-  {
-    "akinsho/bufferline.nvim",
-    branch = "main",
-    event = "LazyFile",
-    config = function()
-      require('mahadia.plugins.bufferline')
-    end
-  },
+  -- {
+  --   "akinsho/bufferline.nvim",
+  --   branch = "main",
+  --   event = "LazyFile",
+  --   config = function()
+  --     require('mahadia.plugins.bufferline')
+  --   end
+  -- },
   {
     'norcalli/nvim-colorizer.lua',
     lazy = true,

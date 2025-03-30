@@ -59,8 +59,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
   desc = "Highlight yanked text",
 })
-
--- Buffer kill command
-vim.api.nvim_create_user_command("BufferKill", function()
-  require('mahadia.plugins.bufferline').buf_kill "bd"
-end, {})
