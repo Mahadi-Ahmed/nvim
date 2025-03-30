@@ -53,18 +53,10 @@ wk.add({
   { "<leader>q", "<cmd>qa<CR>", desc = "Quit" },
   { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Undotree toggle" },
   { "<leader>w", "<cmd>w!<CR>", desc = "Save" },
+  { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explorer" },
 
   { "<leader>b", group = "Buffers" },
-  { "<leader>bb", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous" },
-  { "<leader>bc", "<cmd>BufferKill<CR>", desc = "Close Buffer" },
-  { "<leader>be", "<cmd>BufferLinePickClose<cr>", desc = "Pick which buffer to close" },
-  { "<leader>bh", "<cmd>BufferLineCloseLeft<cr>", desc = "Close all to the left" },
-  { "<leader>bj", "<cmd>BufferLinePick<cr>", desc = "Jump" },
-  { "<leader>bl", "<cmd>BufferLineCloseRight<cr>", desc = "Close all to the right" },
   { "<leader>bm", "<cmd>MaximizerToggle<cr>", desc = "Maximize split toggle" },
-  { "<leader>bn", "<cmd>BufferLineCycleNext<cr>", desc = "Next" },
-  { "<leader>c", "<cmd>BufferKill<CR>", desc = "Close Buffer" },
-  { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explorer" },
   {
     "<leader>f",
     function()
