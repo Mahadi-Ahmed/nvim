@@ -11,7 +11,6 @@ if not actions_setup then
 end
 
 telescope.setup({
-  ---@usage disable telescope completely [not recommended]
   active = true,
   on_config_done = nil,
   -- theme = "dropdown", ---@type telescope_themes
@@ -76,6 +75,7 @@ telescope.setup({
       only_sort_text = true,
     },
     buffers = {
+      sort_lastused = true,
       initial_mode = "normal",
       mappings = {
         i = {
@@ -108,4 +108,5 @@ telescope.setup({
   },
 })
 
-require("telescope").load_extension "fzf"
+require("telescope").load_extension("fzf")
+require("telescope").load_extension("undo")

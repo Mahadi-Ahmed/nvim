@@ -29,6 +29,7 @@ harpoon:extend({
 })
 
 -- Setup telescope integration function
+
 -- local function toggle_telescope(harpoon_files)
 --     local file_paths = {}
 --     for _, item in ipairs(harpoon_files.items) do

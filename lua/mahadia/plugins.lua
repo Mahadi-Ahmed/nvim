@@ -52,6 +52,19 @@ local plugins = {
     end
   },
   {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
+    dependencies = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+      { "debugloop/telescope-undo.nvim" },
+    },
+    cmd = 'Telescope',
+    config = function ()
+      require('mahadia.plugins.telescope')
+    end
+  },
+  {
     'folke/snacks.nvim',
     priority = 1000,
     config = function()
@@ -126,15 +139,6 @@ local plugins = {
       require("mahadia.plugins.flash")
     end,
   },
-  -- {
-  --   "m4xshen/hardtime.nvim",
-  --   lazy = true,
-  --   event = 'LazyFile',
-  --   dependencies = { "MunifTanjim/nui.nvim" },
-  --   config = function()
-  --     require('mahadia.plugins.hardtime')
-  --   end,
-  -- },
   -- statusLine
   {
     "nvim-lualine/lualine.nvim",
@@ -201,21 +205,11 @@ local plugins = {
     end,
     cmd = { 'SessionRestore', 'SessionSave' }
   },
-
-  -- Icons
-  {
-    "nvim-tree/nvim-web-devicons",
-    lazy = true,
-  },
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    },
-    lazy = false
+    opts = {},
+    event = 'LazyFile'
   },
   -- gitsigns
   {
