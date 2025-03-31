@@ -167,7 +167,7 @@ local plugins = {
     end
   },
   -- Terminal
-  { --NOTE: Look into if i can replace this with snacks, only used for lazygit
+  {
     "akinsho/toggleterm.nvim",
     branch = "main",
     event = "VeryLazy",
@@ -183,14 +183,6 @@ local plugins = {
     end
   },
   { 'farmergreg/vim-lastplace' },
-  -- {
-  --   "akinsho/bufferline.nvim",
-  --   branch = "main",
-  --   event = "LazyFile",
-  --   config = function()
-  --     require('mahadia.plugins.bufferline')
-  --   end
-  -- },
   {
     'norcalli/nvim-colorizer.lua',
     lazy = true,
@@ -283,7 +275,6 @@ local plugins = {
       require('mahadia.plugins.ufo')
     end
   },
-  { 'dstein64/vim-startuptime' },
   {
     "zaldih/themery.nvim",
     config = function()
