@@ -43,12 +43,8 @@
   - [x] Add command to select buffer to close 
   - [x] Add keybindings & map then in whichkey
 
-### Snacks picker
-- [x] Live grep should exclude files in gitignore
-- [x] Look into more cool stuff to do with pickers
-- [] Customise look of pickers
-
 #### Interesting plugins to look into later
+- [] Database client for neovim [nvim-dbee](https://github.com/kndndrj/nvim-dbee)
 - Look into interesting packages in mini to add features / replace existing ones:
     - [x] mini.ai, Extend the a/i textobjects[mini.ai](https://github.com/echasnovski/mini.ai)
     - [x] [mini.surround](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md)
@@ -66,7 +62,6 @@
 - [x] Change so the tree doesnt use symbols instead it highlights the color of the name of of file if its dirty/new in git
 
 ### Toggleterm
-- [x] toggleterm - terminal windows inside vim
 - [x] Add intigration to lazygit
 
 # Resources & Inspo

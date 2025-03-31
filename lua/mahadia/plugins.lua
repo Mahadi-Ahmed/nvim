@@ -27,14 +27,12 @@ local plugins = {
     priority = 1000,
     name = 'rose-pine'
   },
-  { "ellisonleao/gruvbox.nvim", name = 'gruvbox',  lazy = true,  event = 'LazyFile' },
-  { "rebelot/kanagawa.nvim",    name = 'kanagawa', lazy = true,  event = 'LazyFile' },
+  { "ellisonleao/gruvbox.nvim", name = 'gruvbox',  cmd = 'Themery' },
+  { "rebelot/kanagawa.nvim",    name = 'kanagawa', cmd = 'Themery' },
   {
     "folke/tokyonight.nvim",
-    lazy = true,
-    priority = 1000,
-    event = 'LazyFile',
     opts = {},
+    cmd = 'Themery'
   },
   -- Treesitter
   {
@@ -48,10 +46,22 @@ local plugins = {
       "TSInstallSync",
       "TSInstallFromGrammar",
     },
-    lazy = true,
-    event = "VeryLazy",
+    event = "LazyFile",
     config = function()
       require('mahadia.plugins.treesitter')
+    end
+  },
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
+    dependencies = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+      { "debugloop/telescope-undo.nvim" },
+    },
+    cmd = 'Telescope',
+    config = function ()
+      require('mahadia.plugins.telescope')
     end
   },
   {
@@ -83,8 +93,12 @@ local plugins = {
   {
     "numToStr/Comment.nvim",
     keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
-    lazy = true,
-    event = "LazyFile",
+    dependencies = {
+      {
+        'JoosepAlviste/nvim-ts-context-commentstring',
+        dependencies = 'nvim-treesitter/nvim-treesitter',
+      }
+    },
     config = function()
       require('mahadia.plugins.comment')
     end
@@ -92,7 +106,6 @@ local plugins = {
   -- Which Key
   {
     "folke/which-key.nvim",
-    cmd = "WhichKey",
     event = "VeryLazy",
     dependencies = {
       'echasnovski/mini.icons', version = false
@@ -102,7 +115,10 @@ local plugins = {
     end
   },
   -- Window Stuff
-  { "szw/vim-maximizer",       event = 'BufRead', lazy = true }, -- maximized and restore current window
+  { -- maximized and restore current window
+    "szw/vim-maximizer",
+    cmd = 'MaximizerToggle',
+  },
   {
     "echasnovski/mini.surround",
     event = "LazyFile",
@@ -117,21 +133,12 @@ local plugins = {
     opts = {},     -- Empty opts table for default settings
   },
   {
-      'folke/flash.nvim',
-      event = "VeryLazy",
-      config = function()
-        require("mahadia.plugins.flash")
-      end,
+    'folke/flash.nvim',
+    event = "LazyFile",
+    config = function()
+      require("mahadia.plugins.flash")
+    end,
   },
-  -- {
-  --   "m4xshen/hardtime.nvim",
-  --   lazy = true,
-  --   event = 'LazyFile',
-  --   dependencies = { "MunifTanjim/nui.nvim" },
-  --   config = function()
-  --     require('mahadia.plugins.hardtime')
-  --   end,
-  -- },
   -- statusLine
   {
     "nvim-lualine/lualine.nvim",
@@ -146,13 +153,10 @@ local plugins = {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require('mahadia.plugins.harpoon')
-    end
-  },
-  {
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    dependencies = 'nvim-treesitter/nvim-treesitter',
-    lazy = true,
-    event = 'LazyFile'
+    end,
+    keys = {
+      { "<leader>j", desc = "Harpoon" }
+    }
   },
   {
     "windwp/nvim-autopairs",
@@ -165,17 +169,8 @@ local plugins = {
   -- Terminal
   { --NOTE: Look into if i can replace this with snacks, only used for lazygit
     "akinsho/toggleterm.nvim",
-    lazy = true,
     branch = "main",
     event = "VeryLazy",
-    -- cmd = {
-    --   "ToggleTerm",
-    --   "TermExec",
-    --   "ToggleTermToggleAll",
-    --   "ToggleTermSendCurrentLine",
-    --   "ToggleTermSendVisualLines",
-    --   "ToggleTermSendVisualSelection",
-    -- },
     config = function()
       require('mahadia.plugins.toggleterm')
     end
@@ -188,14 +183,14 @@ local plugins = {
     end
   },
   { 'farmergreg/vim-lastplace' },
-  {
-    "akinsho/bufferline.nvim",
-    branch = "main",
-    event = "LazyFile",
-    config = function()
-      require('mahadia.plugins.bufferline')
-    end
-  },
+  -- {
+  --   "akinsho/bufferline.nvim",
+  --   branch = "main",
+  --   event = "LazyFile",
+  --   config = function()
+  --     require('mahadia.plugins.bufferline')
+  --   end
+  -- },
   {
     'norcalli/nvim-colorizer.lua',
     lazy = true,
@@ -207,23 +202,14 @@ local plugins = {
     'rmagatti/auto-session',
     config = function()
       require('mahadia.plugins.autoSession')
-    end
-  },
-
-  -- Icons
-  {
-    "nvim-tree/nvim-web-devicons",
-    lazy = true,
+    end,
+    cmd = { 'SessionRestore', 'SessionSave' }
   },
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    },
-    lazy = false
+    opts = {},
+    event = 'LazyFile'
   },
   -- gitsigns
   {
@@ -274,18 +260,11 @@ local plugins = {
     dependencies = {
       "MunifTanjim/nui.nvim",
     },
-    lazy = true,
-    event = 'LazyFile',
     opts = {},
     keys = {
-      -- {
-      --   "gw",
-      --   mode = { "n", "x" },
-      --   function()
-      --     require("wtf").ai()
-      --   end,
-      --   desc = "Debug diagnostic with AI",
-      -- },
+      {
+        "gw",
+      },
       {
         mode = { "n" },
         "gw",
@@ -300,12 +279,10 @@ local plugins = {
     'kevinhwang91/nvim-ufo',
     dependencies = 'kevinhwang91/promise-async',
     event = 'BufRead',
-    lazy = true,
     config = function()
       require('mahadia.plugins.ufo')
     end
   },
-  { 'metakirby5/codi.vim',     event = "CmdlineEnter", lazy = true },
   { 'dstein64/vim-startuptime' },
   {
     "zaldih/themery.nvim",
@@ -324,7 +301,7 @@ local plugins = {
       require('mahadia.plugins.noice')
     end
   },
-  { "ellisonleao/glow.nvim", config = true, cmd = "Glow", event = 'VeryLazy' },
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
   {
     "mfussenegger/nvim-dap",
     dependencies = {

@@ -14,16 +14,7 @@ snacks.setup({
     timeout = 3000,
   },
   picker = {
-    enabled = true,
-    sources = {
-      files = {
-        hidden = true,
-        ignored = false,
-      },
-      git_files = {
-        untracked = true
-      }
-    }
+    enabled = false,
   },
   quickfile = { enabled = true },
   scope = { enabled = true },
