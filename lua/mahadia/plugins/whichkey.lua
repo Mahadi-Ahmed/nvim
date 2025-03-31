@@ -126,7 +126,7 @@ wk.add({
   { "<leader>st", "<cmd>Telescope live_grep<cr>", desc = "Find Text" },
   { "<leader>sT", "<cmd>TodoTelescope<cr>", desc = "Find ToDo" },
   { "<leader>ss", "<cmd>Telescope spell_suggest theme=cursor<cr>", desc = "Spelling" },
-  { "<leader>sn", "<cmd>lua require('noice').cmd('cmd') <cr>", desc = "open Notification in window" },
+  { "<leader>sn", "<cmd>NoiceAll<cr>", desc = "open Notification in window" },
   { "<leader>su", "<cmd>Telescope undo<cr>", desc = "Undo History" },
 
   { "<leader>t", group = "Toggle\'s" },
