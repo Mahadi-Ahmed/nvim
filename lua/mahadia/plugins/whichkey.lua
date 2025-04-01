@@ -57,6 +57,8 @@ wk.add({
 
   { "<leader>b", group = "Buffers" },
   { "<leader>bm", "<cmd>MaximizerToggle<cr>", desc = "Maximize split toggle" },
+  { "<leader>bd", "<cmd>bd<cr>", desc = "Delete buffer" },
+
   {
     "<leader>f",
     function()
@@ -112,8 +114,8 @@ wk.add({
   { "<leader>lm", "<cmd>%!jq . <cr>", desc = "Format json" },
 
   { "<leader>m", group = "Session" },
-  { "<leader>mr", group = "Restore session for cwd" },
-  { "<leader>ms", group = "Save session for auto session root dir" },
+  { "<leader>mr", "<cmd>SessionRestore<CR>",group = "Restore session for cwd" },
+  { "<leader>ms", "<cmd>SessionSave<CR>",group = "Save session for auto session root dir" },
 
   { "<leader>s", group = "Search" },
   { "<leader>s:", "<cmd>Telescope commands<cr>", desc = "Commands" },
