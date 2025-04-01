@@ -34,6 +34,7 @@ local plugins = {
     opts = {},
     cmd = 'Themery'
   },
+  { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',

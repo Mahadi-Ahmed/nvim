@@ -86,6 +86,38 @@ require("themery").setup({
     ]],
       after = [[-- Same as before, but after if you need it]]
     },
+    {
+      name = "catppuccin-frappe",
+      colorscheme = "catppuccin-frappe",
+      before = [[
+      vim.opt.background = "dark"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
+    {
+      name = "catppuccin-macchiato",
+      colorscheme = "catppuccin-macchiato",
+      before = [[
+      vim.opt.background = "dark"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
+    {
+      name = "catppuccin-latte",
+      colorscheme = "catppuccin-latte",
+      before = [[
+      vim.opt.background = "light"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
+    {
+      name = "catppuccin-mocha",
+      colorscheme = "catppuccin-mocha",
+      before = [[
+      vim.opt.background = "dark"
+    ]],
+      after = [[-- Same as before, but after if you need it]]
+    },
   },
   -- themeConfigFile = "/Users/mahadiahmed/.config/nvim/lua/mahadia/plugins/theme.lua",
   -- themeConfigFile = "~/.config/nvim/lua/mahadia/plugins/theme.lua",
