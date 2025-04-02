@@ -23,9 +23,10 @@ local plugins = {
   -- Colorschemes
   {
     'rose-pine/neovim',
-    lazy = false,
-    priority = 1000,
-    name = 'rose-pine'
+    -- lazy = false,
+    -- priority = 1000,
+    name = 'rose-pine',
+    cmd = 'Themery'
   },
   { "ellisonleao/gruvbox.nvim", name = 'gruvbox',  cmd = 'Themery' },
   { "rebelot/kanagawa.nvim",    name = 'kanagawa', cmd = 'Themery' },
@@ -34,7 +35,7 @@ local plugins = {
     opts = {},
     cmd = 'Themery'
   },
-  { "catppuccin/nvim",         name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",         name = "catppuccin", cmd = 'Themery' },
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
