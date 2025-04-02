@@ -53,7 +53,7 @@ flash.setup({
   },
   modes = {
     search = {
-      enabled = true, -- Make sure search mode is enabled
+      enabled = false, -- Make sure search mode is enabled
       highlight = { backdrop = false },
       jump = { history = true, register = true, nohlsearch = true },
     },
